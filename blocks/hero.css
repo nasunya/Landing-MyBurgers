@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.hero {
+  background: url("../img/video-bg1.png") center center/cover no-repeat;
+}
+
+.hero__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__desc {
+  font-size: 30px;
+  color: #fff;
+}
+
+.hero__сontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: .75;
+      -ms-flex: .75;
+          flex: .75;
+}
+/*# sourceMappingURL=hero.css.map */

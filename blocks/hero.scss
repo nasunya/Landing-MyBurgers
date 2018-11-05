@@ -1,0 +1,22 @@
+$yellow: #f9b43b;
+.hero {
+    background: url('../img/video-bg1.png') center center / cover no-repeat;
+}
+
+.hero__content {
+    display    : flex;
+    align-items: center;
+}
+
+
+
+.hero__desc {
+    font-size: 30px;
+    color    : #fff;
+}
+
+.hero__сontainer {
+    display: flex;
+    flex   : .75;
+    
+}
