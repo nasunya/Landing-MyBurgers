@@ -1,11 +1,14 @@
 .title {
+  font-family: 'Gagalin-Regular';
+  font-weight: normal;
+  font-style: normal;
   color: #f9b43b;
-  font-size: 45px;
+  font-size: 72px;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .title--color-black {
   color: black;
+  text-align: center;
 }
 /*# sourceMappingURL=title.css.map */

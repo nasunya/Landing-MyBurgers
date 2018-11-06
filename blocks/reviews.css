@@ -32,11 +32,26 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(80, 80, 80, 0.8);
   opacity: 0;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+.reviews__title {
+  font-family: 'Gagalin-Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  color: #fff;
+}
+
+p {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
 }
 /*# sourceMappingURL=reviews.css.map */

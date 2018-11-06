@@ -30,8 +30,24 @@
     left      : 0;
     right     : 0;
     bottom    : 0;
-    background: rgba(#000, -5);
+    background: rgba(80,80,80,0.8);
     opacity   : 0;
     transform : scale(.8);
     transition: .5s;
+}
+
+.reviews__title {
+    font-family: 'Gagalin-Regular';
+    font-weight: normal;
+    font-style : normal;
+    font-size  : 14px;
+    color      : #fff;
+
+}
+
+p {
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    font-style : normal;
+    font-size  : 14px;
 }

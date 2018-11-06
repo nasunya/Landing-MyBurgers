@@ -11,8 +11,12 @@ $yellow: #f9b43b;
 
 
 .hero__desc {
-    font-size: 30px;
-    color    : #fff;
+    font-family: 'Lifehack-Medium';
+    font-weight: normal;
+    font-style : normal;
+    font-size  : 65px;
+    color      : #fff;
+    line-height: 0.9em;
 }
 
 .hero__сontainer {
@@ -20,3 +24,11 @@ $yellow: #f9b43b;
     flex   : .75;
     
 }
+
+.hero__text {
+    margin-top: 60px;
+
+}
+ .hero__picture {
+     margin-right: 10px;
+ }

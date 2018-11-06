@@ -89,35 +89,35 @@ footer {
 
 @font-face {
   font-family: 'Gagalin-Regular';
-  src: url("../fonts/Gagalin-Regular.woff") format("woff");
+  src: url("../font/gener/gagalin-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Lifehack-Medium';
-  src: url("../fonts/Lifehack-Medium.woff") format("woff");
+  src: url("../font/gener/lifehack_medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/Ubuntu-Light.woff") format("woff");
+  src: url("../font/gener/ubuntu-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/Ubuntu-Medium.woff") format("woff");
+  src: url("../font/gener/ubuntu-medium-webfont.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/ubuntu-b-webfont.woff") format("woff");
+  src: url("../font/gener/ubuntu-b-webfont.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
@@ -136,8 +136,12 @@ footer {
 }
 
 .hero__desc {
-  font-size: 30px;
+  font-family: 'Lifehack-Medium';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 65px;
   color: #fff;
+  line-height: 0.9em;
 }
 
 .hero__сontainer {
@@ -147,6 +151,14 @@ footer {
   -webkit-box-flex: .75;
       -ms-flex: .75;
           flex: .75;
+}
+
+.hero__text {
+  margin-top: 60px;
+}
+
+.hero__picture {
+  margin-right: 10px;
 }
 
 .header {
@@ -163,6 +175,9 @@ footer {
 }
 
 .header__buttons {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-style: normal;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,14 +240,17 @@ footer {
 }
 
 .title {
+  font-family: 'Gagalin-Regular';
+  font-weight: normal;
+  font-style: normal;
   color: #f9b43b;
-  font-size: 45px;
+  font-size: 72px;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .title--color-black {
   color: black;
+  text-align: center;
 }
 
 .best {
@@ -263,6 +281,23 @@ footer {
 
 .best__desc {
   text-align: center;
+}
+
+.best__title {
+  font-family: 'Lifehack-Medium';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.best__img {
+  margin-bottom: 13px;
+}
+
+p {
+  line-height: 1.7;
 }
 
 .reviews {
@@ -299,12 +334,27 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0);
+  background: rgba(80, 80, 80, 0.8);
   opacity: 0;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+.reviews__title {
+  font-family: 'Gagalin-Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  color: #fff;
+}
+
+p {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
 }
 
 .order {

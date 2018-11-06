@@ -13,8 +13,12 @@
 }
 
 .hero__desc {
-  font-size: 30px;
+  font-family: 'Lifehack-Medium';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 65px;
   color: #fff;
+  line-height: 0.9em;
 }
 
 .hero__сontainer {
@@ -24,5 +28,13 @@
   -webkit-box-flex: .75;
       -ms-flex: .75;
           flex: .75;
+}
+
+.hero__text {
+  margin-top: 60px;
+}
+
+.hero__picture {
+  margin-right: 10px;
 }
 /*# sourceMappingURL=hero.css.map */

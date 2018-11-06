@@ -1,11 +1,16 @@
 $yellow: #f9b43b;
 .title {
+
+    font-family  : 'Gagalin-Regular';
+    font-weight  : normal;
+    font-style   : normal;
     color        : $yellow;
-    font-size    : 45px;
+    font-size    : 72px;
     margin-bottom: 20px;
-    text-align   : center;
+   
 }
     .title--color-black {
-        color: black;
+        color     : black;
+        text-align: center;
     }
 

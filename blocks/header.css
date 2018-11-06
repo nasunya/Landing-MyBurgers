@@ -12,6 +12,9 @@
 }
 
 .header__buttons {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-style: normal;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
