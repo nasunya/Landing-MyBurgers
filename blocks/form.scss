@@ -44,8 +44,15 @@ $phones: 480px;
   }
   
   .order__form-row {
+    font-family  : 'Ubuntu';
+    font-weight  : 300;
+    font-style   : normal;
     margin-bottom: rem(16px);
     display      : flex;
+
+    @include phones {
+      justify-content: center;
+    }
   }
   
   .order__form-label {

@@ -1,48 +1,89 @@
-.last {
-    background: url(../img/map-marker1.png) center center / cover no-repeat;
-    
+$red   : #e35028;
+$tablets: 760px;
+$phones : 480px;
+@mixin tablets {
+  @media (max-width: $tablets) {
+      @content;
+      }
+  }
+
+
+
+
+@mixin phones {
+  @media (max-width: $phones) {
+      @content;
+      }
+  }
+.map {
+    background     : url('../img/map-marker1.png') center center no-repeat;
+    background-size: cover;
 }
 .footer {
     position: absolute;
-
-    height    : 4.375rem;
+    width   : 100%;
+   
     background: #000;
     bottom    : 0;
     left      : 0;
     right     : 0;
-}
-
-.footer__adress {
-    display       : flex;
-    width         : 50%;
-    color         : #fff;
-    font-weight   : 300;
-    padding-bottom: 0.3125rem;
-}
-
-.footer__container {
-    display    : flex;
-    padding-top: 0.3125rem;
-    height     : 3.75rem;
-}
-.footer__phone {
-    color      : #e45028;
-    font-weight: bold;
-}
-  
-    .footer__phone-icon {
-      margin-right: 0.3125rem;
-    }
-
-.socails__item {
-  color      : white;
-  display    : inline-flex;
-  margin-left: 1.25rem;
-}
-
-
-.social__list {
-   
-    width: 50%
+    padding   : rem(10px) 0;
     
+
+  }
+
+  .footer__container {
+    display       : flex;
+    flex-direction: row;
+    align-items   : center;
+    @include phones {
+      flex-direction: column;
+      text-align    : center;
+    }
+  }
+
+  .footer__col {
+    width        : 50%;
+    margin-bottom: rem(15px);
+    @include phones {
+      width     : 100%;
+      text-align: center;
+    }
+  }
+  
+  .footer__address {
+    color    : #ffffff;
+    font-size: rem(14px);
+  }
+
+  .footer__phone {
+    font-family    : 'Ubuntu';
+    font-weight    : bold;
+    font-style     : normal;
+    color          : $red;
+    text-decoration: none;
+    font-size      : rem(14px);
+    
+  }
+  
+  .footer__col_right {
+    text-align     : right;
+    margin-bottom  : 0;
+    display        : flex;
+    justify-content: flex-end;
+  
+    @include phones {
+      justify-content: center;
+    }
+  }
+
+.socials {
+    position   : relative;
+    top        : 50%;
+    display    : flex;
+    align-items: center;
+}
+  .socails__link-icon {
+    width : 20px;
+    height: 20px;
 }
