@@ -83,7 +83,7 @@ $phones: 480px;
     resize: none;
   }
   
-  .order__form-buttons {}
+  
   
   .order__radio {
     position    : relative;
@@ -128,9 +128,10 @@ $phones: 480px;
       &:after {
         width : rem(8px);
         height: rem(8px);
-      }
+        
     }
   }
+}
 
   .order__radio-title {
     font-size  : rem(14px);
@@ -144,6 +145,14 @@ $phones: 480px;
     .order__radio-fake {
         border-radius: rem(0px);
     }
+    .radio-fake--radius {
+      position        : relative;
+      width           : 1rem;
+      height          : 1rem;
+      background-color: #fff;
+      border-radius   : 50%;
+}
+    
 
     .order__radio-elem {
         &+.order__radio-fake {
@@ -174,4 +183,29 @@ $phones: 480px;
         background    : transparent;
       }
 
-     
+      .order-link {
+        width      : 15%;
+        padding    : rem(9px) 0;
+        margin-left: 2%;
+        min-width  : rem(85px);
+      }
+
+      .order__radio-elem:checked {
+        
+            width : rem(11px);
+            height: rem(9px);
+            
+          
+         
+            &+.order__radio-fake {
+              &:after {
+                
+                width : rem(11px);
+                height: rem(9px);
+                
+              }
+            }
+          }
+        
+      
+  
