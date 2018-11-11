@@ -1,3 +1,19 @@
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 760px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}
+
 html,
 body {
   height: 100%;
@@ -19,8 +35,9 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 940px;
-  height: 100%;
+  position: relative;
+  width: 100%;
+  max-width: 940px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,10 +56,14 @@ body {
           justify-content: initial;
 }
 
+@media (max-width: 760px) {
+  .container {
+    width: 95%;
+  }
+}
+
 .wrapper {
   position: relative;
-  width: 100%;
-  min-width: 960px;
   min-height: 100%;
   overflow: hidden;
 }

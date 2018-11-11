@@ -1,34 +1,64 @@
+$tablets: 760px;
+$phones: 480px;
+
+
+
+
+
+@mixin phones {
+  @media (max-width: $phones) {
+      @content;
+      }
+  }
+
+
 .best {
     background: url(../img/bg_best.png) center center / cover no-repeat;
-}
+    display   : flex;
 
-.best__list {
+
+    &__list {
     display: flex;
+    @include phones {
+        flex-direction: column;
+      }
 }
 
-.best__item {
+   &__item {
     flex          : 1;
     display       : flex;
     flex-direction: column;
     align-items   : center;
+    color         : #2f3234;
+    @include phones {
+        flex-direction: initial;
+      }
+    
 }
-.best__desc {
+    &__desc {
     text-align: center;
+    @include phones {
+        text-align: left;
+      }
 }
 
-.best__title {
+    &__title {
     font-family  : 'Lifehack-Medium';
     font-weight  : normal;
     font-style   : normal;
-    font-size    : 24px;
-    margin-bottom: 15px;
+    font-size    : 1.5rem;
+    margin-bottom: 0.625rem;
     line-height  : 1.1;
 }
-
-.best__img {
-    margin-bottom: 13px;
-}
-
-p {
+    &__text {
+    color      : #908e8c;
     line-height: 1.7;
+}
+    &__iconS {
+    margin-bottom: 13px;
+
+    @include phones {
+        margin-right: 10px;
+      }
+}
 }

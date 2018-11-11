@@ -1,16 +1,27 @@
 $yellow: #f9b43b;
+$tablets: 760px;
+
+@mixin tablets {
+    @media (max-width: $tablets) {
+        @content;
+        }
+    }
 .title {
 
     font-family  : 'Gagalin-Regular';
     font-weight  : normal;
     font-style   : normal;
     color        : $yellow;
-    font-size    : 72px;
-    margin-bottom: 20px;
+    font-size    : 4.5rem;
+    margin-bottom: 1.25rem;
+    @include tablets {
+        font-size: 3.9375rem;
+      }
    
 }
     .title--color-black {
-        color     : black;
-        text-align: center;
+        color      : black;
+        text-align : center;
+        padding-top: 115px;
     }
 

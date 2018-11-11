@@ -4,9 +4,14 @@ $yellow: #f9b43b;
 $black : #2f3234;
 $red   : #e35028;
 
+//breakpoints
+$tablets: 760px;
+$phones : 480px;
 
+@import "../blocks/media.scss";
 @import "../layout/layout.scss";
 @import "../font/fonts.scss";
+
 
 
 
@@ -19,3 +24,8 @@ $red   : #e35028;
 @import "../blocks/best.scss";
 @import "../blocks/reviews.scss";
 @import "../blocks/form.scss";
+@import "../blocks/team.scss";
+@import "../blocks/footer.scss";
+@import "../blocks/social.scss";
+
+
