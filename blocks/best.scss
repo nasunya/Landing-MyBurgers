@@ -36,6 +36,7 @@ $phones: 480px;
     color         : #2f3234;
     @include phones {
         flex-direction: initial;
+        
       }
     
 }
@@ -68,6 +69,7 @@ $phones: 480px;
 
     @include phones {
         margin-right: 10px;
+        
       }
 }
 }

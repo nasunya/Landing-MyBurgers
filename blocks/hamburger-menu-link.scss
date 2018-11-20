@@ -15,7 +15,7 @@ $phones : 480px;
         @content;
         }
     }
-
+    
 .hamburger-menu-link {
     vertical-align: middle;
     position      : relative;
@@ -25,6 +25,7 @@ $phones : 480px;
     display       : none;
     @include tablets {
         display: flex;
+        
     }
 }
 
@@ -36,7 +37,7 @@ $phones : 480px;
         border-radius: 0.1875rem;
     }
 
-    &:before, &:after {
+     &:before, &:after, {
         content : "";
         display : block;
         position: absolute;
@@ -47,3 +48,4 @@ $phones : 480px;
     }
 
 }
+

@@ -22,13 +22,14 @@
   transition: .3s;
 }
 
-.socials__link:hover {
-  opacity: 1;
+.socials__link-icon {
+  fill: #fff;
+  width: 30px;
+  height: 30px;
+  padding-right: 10px;
 }
 
-.socials__icon {
-  width: 1.25rem;
-  height: 1.25rem;
-  color: #fff;
+.socials__link:hover {
+  opacity: 1;
 }
 /*# sourceMappingURL=social.css.map */

@@ -38,7 +38,6 @@
 
 .footer__col {
   width: 50%;
-  margin-bottom: rem(15px);
 }
 
 @media (max-width: 480px) {
@@ -53,13 +52,17 @@
   font-size: rem(14px);
 }
 
-.footer__phone {
+.footer__phone-number {
   font-family: 'Ubuntu';
   font-weight: bold;
   font-style: normal;
   color: #e35028;
   text-decoration: none;
   font-size: rem(14px);
+}
+
+.footer__phone-icon {
+  padding-right: 4px;
 }
 
 .footer__col_right {
@@ -79,21 +82,5 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-}
-
-.socials {
-  position: relative;
-  top: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.socails__link-icon {
-  width: 20px;
-  height: 20px;
 }
 /*# sourceMappingURL=footer.css.map */
