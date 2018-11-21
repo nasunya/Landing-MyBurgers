@@ -350,6 +350,10 @@ footer {
   margin: 0 0.625rem;
 }
 
+.nav__link:hover {
+  text-decoration: underline;
+}
+
 .btn {
   border-radius: 0.3125rem;
   padding: 0.625rem 0.9375rem;
@@ -432,6 +436,7 @@ footer {
     -webkit-box-direction: initial;
         -ms-flex-direction: initial;
             flex-direction: initial;
+    padding-bottom: 20px;
   }
 }
 
@@ -661,9 +666,9 @@ footer {
   margin-left: 5%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 760px) {
   .order__form-col {
-    width: 100%;
+    width: 80%;
     margin-left: 0;
   }
 }
@@ -1085,6 +1090,9 @@ footer {
 }
 
 .footer__address {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-style: normal;
   color: #ffffff;
   font-size: 0.875rem;
 }

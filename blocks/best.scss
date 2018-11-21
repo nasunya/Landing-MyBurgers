@@ -37,7 +37,7 @@ $phones: 480px;
     color         : #2f3234;
     @include phones {
         flex-direction: initial;
-        
+        padding-bottom: 20px;
       }
     
 }

@@ -40,4 +40,8 @@
   background: #fff;
   margin: 0 0.625rem;
 }
+
+.nav__link:hover {
+  text-decoration: underline;
+}
 /*# sourceMappingURL=nav.css.map */

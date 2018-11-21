@@ -48,6 +48,9 @@
 }
 
 .footer__address {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-style: normal;
   color: #ffffff;
   font-size: rem(14px);
 }

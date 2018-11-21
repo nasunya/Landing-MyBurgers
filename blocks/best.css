@@ -49,6 +49,7 @@
     -webkit-box-direction: initial;
         -ms-flex-direction: initial;
             flex-direction: initial;
+    padding-bottom: 20px;
   }
 }
 
