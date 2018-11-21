@@ -6,15 +6,13 @@ $phones : 480px;
       @content;
       }
   }
-
-
-
-
 @mixin phones {
   @media (max-width: $phones) {
       @content;
       }
   }
+
+  
 .map {
     background     : url('../img/map-marker1.png') center center no-repeat;
     background-size: cover;
@@ -35,6 +33,8 @@ $phones : 480px;
     display       : flex;
     flex-direction: row;
     align-items   : center;
+   
+    
     @include phones {
       flex-direction: column;
       text-align    : center;
@@ -43,6 +43,8 @@ $phones : 480px;
 
   .footer__col {
     width: 50%;
+
+  
     @include phones {
       width     : 100%;
       text-align: center;
@@ -65,7 +67,7 @@ $phones : 480px;
   }
   
   .footer__phone-icon {
-    padding-right: 4px;
+    padding-right: 0.25rem;
   }
  
 
@@ -78,5 +80,7 @@ $phones : 480px;
     @include phones {
       justify-content: center;
     }
+    
   }
+
 

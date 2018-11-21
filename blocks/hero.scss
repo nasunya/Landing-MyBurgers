@@ -24,6 +24,7 @@ $phones : 480px;
 .hero__content {
     display    : flex;
     align-items: center;
+  
     @include tablets {
         flex-direction: column;
         padding       : 0 12%;
@@ -54,7 +55,7 @@ $phones : 480px;
     flex           : 1;
     flex-direction : column;
     justify-content: center;
-    padding-bottom : 15%;
+    padding-bottom : 10%;
     
 }
 .hero__right,
@@ -86,12 +87,15 @@ $phones : 480px;
      max-height: 100%;
  }
 .down-arrow__icon {
-    fill    : #fff;
-    width   : 30px;
-    height  : 20px;
-    position: absolute;
-    top     : 650px;
-    bottom  : 0px;
-    right   : 0px;
-    left    : 700px;
+    fill  : #fff;
+    width : 1.875rem;
+    height: 1.25rem;
+  
 }
+
+.down-arrow {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+}
+

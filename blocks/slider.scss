@@ -30,7 +30,6 @@ $phones: 480px;
     justify-content: center;
     align-items    : center;
   
-     
   &__arrow {
     position  : absolute;
     display   : inline-block;
@@ -120,7 +119,7 @@ $phones: 480px;
   }
 
   &__prise {
-      padding-right: 30px;
+      padding-right: 1.875rem;
   }
 
   &__btn-order {
@@ -202,16 +201,16 @@ $phones: 480px;
   opacity  : 1;
 }
 .slider__comp-icon {
-    width : 40px;
-    height: 40px;
+    width : 2.5rem;
+    height: 2.5rem;
 }
 .slider__calorie {
   position     : absolute;
   bottom       : 0;
   left         : 0;
   background   : url("/icons/kkal.svg") center 0.9375rem no-repeat;
-  width        : 90px;
-  height       : 90px;
+  width        : 5.625rem;
+  height       : 5.625rem;
   border-radius: 0.3125rem;
   
   font-family   : 'Gagalin-Regular';
@@ -230,12 +229,12 @@ $phones: 480px;
 
 .slider__calorie-sum {
   font-size  : 1.25rem;
-  padding-top: 40px;
+  padding-top: 2.5rem;
 }
 
 .slider__calorie-unit {
   font-size  : 0.875rem;
-  padding-top: 15px;
+  padding-top: 0.9375rem;
 }
 
 .slider__order-button {

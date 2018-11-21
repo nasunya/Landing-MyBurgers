@@ -184,13 +184,14 @@
 .team-acco__text-title {
   font-family: 'Ubuntu';
   font-weight: bold;
-  margin-bottom: 1.5625rem;
+  margin-bottom: 1.1rem;
 }
 
 .team-acco__text-content {
   font-family: 'Ubuntu';
   font-weight: 300;
   font-style: normal;
-  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.7;
 }
 /*# sourceMappingURL=team.css.map */

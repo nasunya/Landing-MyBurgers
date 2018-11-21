@@ -109,6 +109,7 @@ $phones: 480px;
         color        : #ffffff;
         font-size    : rem(14px);
         margin-bottom: rem(13px);
+        line-height  : 1.8;
       
         @include phones {
           display: none;

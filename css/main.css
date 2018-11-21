@@ -202,7 +202,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 15%;
+  padding-bottom: 10%;
 }
 
 .hero__right,
@@ -245,13 +245,21 @@ footer {
 
 .down-arrow__icon {
   fill: #fff;
-  width: 30px;
-  height: 20px;
-  position: absolute;
-  top: 650px;
-  bottom: 0px;
-  right: 0px;
-  left: 700px;
+  width: 1.875rem;
+  height: 1.25rem;
+}
+
+.down-arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header {
@@ -370,7 +378,7 @@ footer {
 .title--color-black {
   color: black;
   text-align: center;
-  padding-top: 115px;
+  padding-top: 7.1875rem;
 }
 
 .best {
@@ -449,6 +457,7 @@ footer {
 .best__text {
   font-family: Ubuntu;
   font-weight: 300;
+  font-style: normal;
   font-size: 0.875rem;
   line-height: 1.875rem;
   color: #2f3234;
@@ -468,6 +477,11 @@ footer {
 .title--color--black {
   margin-bottom: 5rem;
   color: #000;
+}
+
+.best__icon-pic {
+  width: 5rem;
+  height: 5rem;
 }
 
 .reviews {
@@ -578,6 +592,7 @@ footer {
   color: #ffffff;
   font-size: 0.875rem;
   margin-bottom: 0.8125rem;
+  line-height: 1.8;
 }
 
 @media (max-width: 480px) {
@@ -1009,14 +1024,15 @@ footer {
 .team-acco__text-title {
   font-family: 'Ubuntu';
   font-weight: bold;
-  margin-bottom: 1.5625rem;
+  margin-bottom: 1.1rem;
 }
 
 .team-acco__text-content {
   font-family: 'Ubuntu';
   font-weight: 300;
   font-style: normal;
-  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.7;
 }
 
 .map {
@@ -1083,7 +1099,7 @@ footer {
 }
 
 .footer__phone-icon {
-  padding-right: 4px;
+  padding-right: 0.25rem;
 }
 
 .footer__col_right {
@@ -1131,9 +1147,9 @@ footer {
 
 .socials__link-icon {
   fill: #fff;
-  width: 30px;
-  height: 30px;
-  padding-right: 10px;
+  width: 1.875rem;
+  height: 1.875rem;
+  padding-right: 0.625rem;
 }
 
 .socials__link:hover {
@@ -1384,7 +1400,7 @@ footer {
 }
 
 .slider__prise {
-  padding-right: 30px;
+  padding-right: 1.875rem;
 }
 
 .slider__btn-order {
@@ -1466,8 +1482,8 @@ footer {
 }
 
 .slider__comp-icon {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .slider__calorie {
@@ -1475,8 +1491,8 @@ footer {
   bottom: 0;
   left: 0;
   background: url("/icons/kkal.svg") center 0.9375rem no-repeat;
-  width: 90px;
-  height: 90px;
+  width: 5.625rem;
+  height: 5.625rem;
   border-radius: 0.3125rem;
   font-family: 'Gagalin-Regular';
   font-weight: normal;
@@ -1493,12 +1509,12 @@ footer {
 
 .slider__calorie-sum {
   font-size: 1.25rem;
-  padding-top: 40px;
+  padding-top: 2.5rem;
 }
 
 .slider__calorie-unit {
   font-size: 0.875rem;
-  padding-top: 15px;
+  padding-top: 0.9375rem;
 }
 
 .slider__order-button {

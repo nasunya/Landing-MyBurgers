@@ -23,6 +23,7 @@ $phones: 480px;
 
     &__list {
     display: flex;
+
     @include phones {
         flex-direction: column;
       }
@@ -58,7 +59,7 @@ $phones: 480px;
     &__text {
         font-family: Ubuntu;
         font-weight: 300;
-        
+        font-style : normal;
         font-size  : 0.875rem;
         line-height: 1.875rem;
         color      : #2f3234;
@@ -66,6 +67,8 @@ $phones: 480px;
 }
     &__icon {
         margin-bottom: 1.875rem;
+      
+     
 
     @include phones {
         margin-right: 10px;
@@ -78,3 +81,7 @@ $phones: 480px;
     color        : #000;
   }
 
+  .best__icon-pic {
+    width : 5rem;
+    height: 5rem;
+  }
