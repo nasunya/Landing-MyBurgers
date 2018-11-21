@@ -1,0 +1,110 @@
+
+$tablets: 760px;
+$phones : 480px;
+@mixin tablets {
+  @media (max-width: $tablets) {
+      @content;
+      }
+  }
+
+
+
+
+@mixin phones {
+  @media (max-width: $phones) {
+      @content;
+      }
+  }
+
+.paginator {
+    position: fixed;
+    right   : 3.125rem;
+    top     : 5rem;
+    z-index : 100;
+    
+    &__list {
+        display       : flex;
+        flex-direction: column;
+    }
+    
+    &__item {
+        position        : relative;
+        width           : 0.375rem;
+        height          : 0.375rem;
+        border-radius   : 50%;
+        background-color: white;
+        margin-top      : 0.9375rem;
+        font-family     : 'Ubuntu';
+        font-weight     : 300;
+        font-style      : normal;
+        font-size       : 0.625rem;
+        color           : white;
+        text-transform  : uppercase;
+        cursor          : pointer;
+        text-align      : right;
+    }
+    
+    &__item::before {
+        content   : "";
+        display   : block;
+        position  : absolute;
+        top       : -0.1875rem;
+        width     : 6.25rem;
+        opacity   : 0;
+        transition: .3s;
+    }
+    
+    &__item:hover::before {
+        opacity  : 1;
+        transform: translateX(-110px);
+    }
+    
+    
+    $paginator-elems: (
+        1: "Начало",
+        2: "О нас",
+        3: "Бургеры",
+        4: "Команда",
+        5: "Меню",
+        6: "Отзывы",
+        7: "Как делаем",
+        8: "Заказать",
+        9: "Контакты"
+    );
+    
+    &__item {
+        @each $page, $elem in $paginator-elems {
+            &:nth-child(#{$page})::before {
+                content: "#{$elem}";
+            }
+        }
+    }
+    
+    &__item-active::after {
+        content      : "";
+        position     : absolute;
+        top          : -0.3125rem;
+        bottom       : -0.3125rem;
+        left         : -0.3125rem;
+        right        : -0.3125rem;
+        border-radius: 50%;
+        border       : 0.0625rem solid white;
+        z-index      : -1;
+    }
+    
+    &__link {
+        content : "";
+        display : block;
+        position: absolute;
+        top     : -0.625rem;
+        bottom  : -0.625rem;
+        left    : -0.625rem;
+        right   : -0.625rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .paginator {
+        display: none;
+    }
+}

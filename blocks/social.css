@@ -1,0 +1,35 @@
+.socials {
+  position: relative;
+  top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socials__item {
+  margin-left: 0.625rem;
+}
+
+.socials__link {
+  display: inline-block;
+  max-width: 1.4375rem;
+  max-height: 1.25rem;
+  opacity: .3;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.socials__link-icon {
+  fill: #fff;
+  width: 1.875rem;
+  height: 1.875rem;
+  padding-right: 0.625rem;
+}
+
+.socials__link:hover {
+  opacity: 1;
+}
+/*# sourceMappingURL=social.css.map */

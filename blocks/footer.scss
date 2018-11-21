@@ -1,0 +1,89 @@
+$red   : #e35028;
+$tablets: 760px;
+$phones : 480px;
+@mixin tablets {
+  @media (max-width: $tablets) {
+      @content;
+      }
+  }
+@mixin phones {
+  @media (max-width: $phones) {
+      @content;
+      }
+  }
+
+  
+.map {
+    background     : url('../img/map-marker1.png') center center no-repeat;
+    background-size: cover;
+}
+.footer {
+    position  : absolute;
+    width     : 100%;
+    background: #000;
+    bottom    : 0;
+    left      : 0;
+    right     : 0;
+    padding   : rem(10px) 0;
+    
+
+  }
+
+  .footer__container {
+    display       : flex;
+    flex-direction: row;
+    align-items   : center;
+   
+    
+    @include phones {
+      flex-direction: column;
+      text-align    : center;
+    }
+  }
+
+  .footer__col {
+    width: 50%;
+
+  
+    @include phones {
+      width     : 100%;
+      text-align: center;
+    }
+  }
+  
+  .footer__address {
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-style : normal;
+    color      : #ffffff;
+    font-size  : rem(14px);
+  }
+
+  .footer__phone-number {
+    font-family    : 'Ubuntu';
+    font-weight    : bold;
+    font-style     : normal;
+    color          : $red;
+    text-decoration: none;
+    font-size      : rem(14px);
+    
+  }
+  
+  .footer__phone-icon {
+    padding-right: 0.25rem;
+  }
+ 
+
+  .footer__col_right {
+    text-align     : right;
+    margin-bottom  : 0;
+    display        : flex;
+    justify-content: flex-end;
+  
+    @include phones {
+      justify-content: center;
+    }
+    
+  }
+
+
