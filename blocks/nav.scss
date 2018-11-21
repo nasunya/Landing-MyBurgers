@@ -1,15 +1,5 @@
-$tablets: 760px;
-
-@mixin tablets {
-    @media (max-width: $tablets) {
-        @content;
-        }
-    }
 .nav {
-    margin-right: 0.9375rem;
-    @include tablets {
-        display: none;
-      }
+    margin-right: 15px;
 }
 
 .nav__list {
@@ -20,39 +10,22 @@ $tablets: 760px;
     display: none;
 
 }
-
 .nav__link {
     color          : #fff;
     text-decoration: none;
-    font-size      : 0.8125rem;
-    padding        : 0.4125rem;
+    font-size      : 13px;
     text-transform : uppercase;
     display        : flex;
     align-items    : center;
 
     &:after {
         content      : "";
-        width        : 0.25rem;
-        height       : 0.25rem;
+        width        : 4px;
+        height       : 4px;
         display      : block;
         border-radius: 50%;
         background   : #fff;
-        margin       : 0 0.625rem;
+        margin       : 0 10px;
     }
 }
 
-.to-next-section {
-    display        : block;
-    width          : 1.875rem;
-    height         : 0.9375rem;
-    background     : url("../icons/arrow-scroll.svg") center  no-repeat;
-    background-size: 1.875rem 0.9375rem;
-    margin-bottom  : 2.5rem;
-    position       : absolute;
-    top            : 90%;
-    left           : 50%;
-
-    @include tablets {
-        top: 90%;
-      }
-}
