@@ -1,11 +1,15 @@
 .header {
+    
     display        : flex;
     align-items    : center;
     justify-content: space-between;
-    padding-top    : 12px;
+    padding-top    : 0.75rem;
 }
 
 .header__buttons {
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-style : normal;
     display    : flex;
     align-items: center;
 }

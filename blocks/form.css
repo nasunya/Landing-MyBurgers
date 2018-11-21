@@ -1,29 +1,181 @@
 .order {
-  background: url(../img/bg-texture.png);
+  background: url(../img/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.png) 50% no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.form {
-  color: #fff;
+.section__title {
+  text-align: center;
 }
 
-.form__row {
+.order__form {
+  margin-left: -5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.form__block {
+@media (max-width: 760px) {
+  .order__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 0;
+  }
+}
+
+.order__form-col {
+  width: 45%;
+  margin-left: 5%;
+}
+
+@media (max-width: 480px) {
+  .order__form-col {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.order__form-row {
+  margin-bottom: rem(16px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.order__form-label {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-style: normal;
+  color: #fff;
+  font-size: rem(14px);
+  margin-bottom: rem(17px);
+}
+
+.order__form-input {
+  font-size: rem(14px);
+  padding: rem(10px);
+  padding: rem(5px) rem(10px);
+  border: rem(1px) solid #d1cfcb;
+  border-radius: rem(5px);
+  width: 100%;
+}
+
+.order__form-block {
+  display: block;
+  width: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-right: 20px;
+  margin-left: 10px;
 }
 
-.form__block:last-child {
-  margin-right: 0;
+.order__form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -10px;
 }
 
-.form__input {
-  width: 100%;
+.order__form-input_textarea {
+  height: rem(110px);
+  resize: none;
+}
+
+.order__radio {
+  position: relative;
+  white-space: nowrap;
+  margin-right: rem(20px);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.order__radio-elem {
+  position: absolute;
+  top: 0;
+  left: rem(-9999px);
+}
+
+.order__radio-fake {
+  width: rem(16px);
+  height: rem(16px);
+  border-radius: 50%;
+  background: #fff;
+  position: relative;
+}
+
+.order__radio-fake:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: rem(0px);
+  height: rem(0px);
+  border-radius: 50%;
+  background: #e35028;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: width .3s, height .3s;
+  transition: width .3s, height .3s;
+}
+
+.order__radio-elem:checked + .order__radio-fake:after {
+  width: rem(8px);
+  height: rem(8px);
+}
+
+.order__radio-title {
+  font-size: rem(14px);
+  color: #fff;
+  margin-left: rem(10px);
+}
+
+.order__radio_checkbox {
+  border-radius: rem(0px);
+}
+
+.order__radio-fake {
+  border-radius: rem(0px);
+}
+
+.order__radio-elem + .order__radio-fake:after {
+  background: transparent;
+}
+
+.order__form-button {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-style: normal;
+  margin-right: rem(20px);
+  border: 0;
+  background: #e35028;
+  font-size: rem(13px);
+  text-transform: uppercase;
+  border-radius: rem(5px);
+  color: #ffffff;
+  padding: rem(10px) rem(15px);
+  cursor: pointer;
+}
+
+.order__form-button_reset {
+  padding-left: 0;
+  padding-right: 0;
+  text-transform: none;
+  background: transparent;
 }
 /*# sourceMappingURL=form.css.map */
