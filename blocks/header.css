@@ -8,13 +8,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 0.75rem;
+  padding-top: 12px;
 }
 
 .header__buttons {
-  font-family: 'Ubuntu';
-  font-weight: 500;
-  font-style: normal;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
