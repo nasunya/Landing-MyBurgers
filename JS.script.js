@@ -50,6 +50,21 @@ const items = document.querySelector('.')?
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //вебианр 1 variant
 
 const left     = document.querySelector("#left");
@@ -86,7 +101,7 @@ left.addEventListener("click", function(e) {
 });
 
 
-//вебианр 2 variant
+//вебианр 2 variant  - не обращаемся к DOM дереву
 
 const left  = document.querySelector("#left");
 const right = document.querySelector("#right");
@@ -95,20 +110,133 @@ const items = document.querySelector("#items");
 const minRight     = 0;
 const maxRight     = 600;
 const step         = 100;
-let   currentRight = 0;
+let   currentRight = 0;    //слайде при загрузке стр всегда вначале
 
 items.style.right = currentRight;
 
 right.addEventListener("click", function() {
   if (currentRight < maxRight) {
-    currentRight      += step;
+    currentRight      += step;                 //currentRight      +step
     items.style.right  = currentRight + "px";
-  }
+  }else {
+    currentRight      = 0  // постоянная прокрутка
+    items.style.right = 0  //
 });
 
 left.addEventListener("click", function() {
   if (currentRight > minRight) {
     currentRight      -= step;
     items.style.right  = currentRight + "px";
-  }
+  } else {
+    currentRight      = maxRight;
+    items.style.right = currentRight + "px";
 });
+
+
+// overlay 1 способ
+
+const openButton     = document.querySelector("#openOverlay");
+const successOverlay = createOverlay("Привет, <b>loftschool</b>!");  //createOverlay создает overlay
+
+openButton.addEventListener("click", function() {
+  document.body.appendChild(successOverlay);// добавь вот тот overlay , который мы создали на 2 строке добавь его в DOM дерево, а на кнопке закрыть document.body.removeChild(overlayElement) убираем его
+});
+
+function openOverlay(content) { // функция только создает overlay но не добавляет на страницу
+  const overlayElement = document.createElement("div");  //создаем сам overlay элемент див
+  overlayElement.classList.add("overlay");// с класссом .overlay
+
+  const containerElement = document.createElement("div");
+  containerElement.classList.add("container");
+
+  const contentElement = document.createElement("div");  // создаем контентную часть "Привет, <b>loftschool
+  contentElement.classList.add("content");
+  contentElement.innerHTML = content;  // пучть содержимым дива  будет тот контент, который мв попросили в это див положить
+
+  const closeElement = document.createElement("a");  // кнопка закрытить. ссылка
+  closeElement.classList.add("close");//класс
+  closeElement.textContent = "x";  //текстовое содержимое
+  closeElement.href        = "#";
+  closeElement.addEventListener("click", function(event) {//.
+    event.preventDefault ();
+    document.body.removeChild(overlayElement);// removeChild - происходит изъятие элмента  overlayElement из body-тела документа
+  });
+
+  overlayElement.appendChild(containerElement);// говорим положи container в overlay
+  containerElement.appendChild(closeElement); // положи кнопку закрытия в контейнер
+  containerElement.appendChild(contentElement);// положи контентную часть в контейнер 
+
+  return overlayElement;// верни, что получилось
+}
+
+
+
+// overlay 2 способ - вынесли верстку в html
+const openButton     = document.querySelector("#openOverlay");
+const successOverlay = createOverlay("Привет, <b>loftschool</b>!");
+
+openButton.addEventListener("click", function() {
+  document.body.appendChild(successOverlay);
+});
+
+function createOverlay(content) {// создаем корневой элемент див к лассом оверлей 
+  const overlayElement = document.createElement("div");
+  overlayElement.classList.add("overlay");
+
+  const template                 = document.querySelector("#overlayTemplate");  // получаем доступ к ID 
+        overlayElement.innerHTML = template.innerHTML;                          // и берем из него html и кладем в корневой элемент overlayElement.innerHTML
+
+  const closeElement = overlayElement.querySelector(".close");  // получаем доступ к кнопке
+  closeElement.addEventListener("click", function(event) {
+    event.preventDefault ();
+    document.body.removeChild(overlayElement);// убираем элемент из дом дерево
+  });
+
+  const contentElement           = overlayElement.querySelector(".content");  // получаем доступ
+        contentElement.innerHTML = content;                                   // и даем какое-то html содержимое
+
+  return overlayElement;
+}
+
+// overlay 3 способ 
+сonst openButton = document.querySelector(".openOverlay");                // получили доступ к кнопке закрытия
+const template   = document.querySelector("#overlayTemplate").innerHTML;  // получили доступ к шаблону и сразу получили innerHTML
+const overlay    = createOverlay(template);                               //создали оверлей и дали шаблон по которому нужно создать оверлей
+
+openButton.addEventListener("click", function() {
+  overlay.open();
+  overlay.setContent("Спасибо, данные сохранены");
+});
+
+function createOverlay(template) {
+  let fragment = document.createElement('div');  // создаем элемент заглушкуи называем фрагмент. гооврим создай див и положи в него содержимое шаблона
+
+  fragment.innerHTML = template;  // внутрь дива помещаем наш шаблон
+
+  const overlayElement = fragment.querySelector(".overlay");  // получаем доступ к элементам в оверлей
+  const contentElement = fragment.querySelector(".content");
+  const closeElement   = fragment.querySelector(".close");
+  
+  fragment = null;
+
+  overlayElement.addEventListener("click", e => { // чтобы при клике на любую часть экрана закрылось окно
+    if (e.target === overlayElement) {// у каждого события есть свойство target , который указывает на какой элемент вообще происходил кликю. если кликнули на оверлей, то закоываем его
+      closeElement.click();
+    }
+  });
+  closeElement.addEventListener("click", () => {//при клике на крестик убираем оверлей
+    document.body.removeChild(overlayElement);
+  });
+
+  return {// возвращаем объект 
+    open() {
+      document.body.appendChild(overlayElement);
+    },
+    close() {
+      closeElement.click();
+    },
+    setContent(content) {// кнопка установить контент оверлкю 
+      contentElement.innerHTML = content;
+    }
+  };
+}
