@@ -3,6 +3,34 @@ $yellow: #f9b43b;
 $black : #2f3234;
 $red   : #e35028;
 
+$tablets: 760px;
+$phones : 480px;
+@mixin tablets {
+  @media (max-width: $tablets) {
+      @content;
+      }
+  }
+
+
+
+
+@mixin phones {
+  @media (max-width: $phones) {
+      @content;
+      }
+  }
+
+html {
+  font-size: 16px;
+
+  @include tablets {
+    font-size: 14px;
+  }
+  @include phones {
+    font-size: 13px;
+  }
+}
+
 html,
 body {
     height: 100%;
@@ -23,10 +51,10 @@ body {
   min-height: 650px;
 }
 .container {
-    margin: 0 auto;
-   // position : relative;
-    width          : 940px;
-    height         : 100%;
+    margin         : 0 auto;
+    position       : relative;
+    width          : 100%;
+    max-width      : 940px;
     display        : flex;
     flex-direction : column;
     justify-content: center;
@@ -34,13 +62,13 @@ body {
    &--without-align {
      justify-content: initial;
    }
-    
-}
+   @include tablets {
+    width: 95%;
+  }
+  } 
 
 .wrapper {
     position  : relative;
-    width     : 100%;
-    min-width : 940px + 20px;
     min-height: 100%;
     overflow  : hidden;
   }

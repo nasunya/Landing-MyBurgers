@@ -1,0 +1,92 @@
+.menu {
+  background: url("../img/photo-1428660386617-8d277e7deaf2.png") 50% no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.menu__title {
+  font-family: 'Gagalin-Regular';
+  font-weight: normal;
+  font-style: normal;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.menu-acco {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-acco__item {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-acco__item.active .menu-acco__trigger-text {
+  color: #f9b43b;
+}
+
+.section__title_white {
+  font-family: 'Gagalin-Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: rem(72px);
+  color: #fff;
+}
+
+.menu-acco__trigger {
+  width: rem(80px);
+  display: block;
+  height: 100%;
+  float: left;
+  background: cover;
+  text-decoration: none;
+  position: relative;
+}
+
+.menu-acco__trigger-text {
+  font-family: 'Gagalin-Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: rem(40px);
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  -webkit-transform: rotate(-90deg) translateY(-50%);
+          transform: rotate(-90deg) translateY(-50%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+  margin-top: rem(-20px);
+}
+
+.menu-acco__content {
+  height: 100%;
+  float: left;
+  background: rgba(47, 50, 52, 0.93);
+  width: 0;
+  overflow: hidden;
+}
+
+.menu-acco__text {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-style: normal;
+  font-size: rem(14px);
+  color: #fff;
+  padding: rem(60px) rem(30px);
+  width: 100%;
+  line-height: 1.8;
+  display: none;
+}
+/*# sourceMappingURL=menu.css.map */
