@@ -13,16 +13,19 @@ $tablets: 760px;
   position       : relative;
 }
 
+
 .team__container {
   position        : absolute;
   top             : 0;
   bottom          : 0;
   right           : 0;
   left            : 50%;
-  padding-left    : 4.375rem;
   display         : flex;
   background-color: rgba(70, 70, 70, .9);
   padding-top     : 5% 2% 0 7%;
+  align-items     : center;
+  justify-content : center;
+  flex-direction  : column;
 
 
   @include tablets {
@@ -36,13 +39,15 @@ $tablets: 760px;
 }
 
 .title__team {
-  padding-top  : 70px;
   margin-bottom: 3.125rem;
 }
 
 .team-acco__item {
  
   margin-bottom: 1rem;
+  &:last-child {
+		margin-bottom: 0;
+	}
 
 
 }
@@ -78,6 +83,8 @@ $tablets: 760px;
   position       : relative;
   display        : inline-flex;
   margin-bottom  : 1.25rem;
+  align-items    : center;
+  
  
   @include tablets {
     display: inline-flex;
@@ -161,4 +168,6 @@ $tablets: 760px;
 .team-acco__text-content {
   font-family: 'Ubuntu';
   font-weight: 300;
+  font-style : normal;
+  font-size  : 14px;
 }

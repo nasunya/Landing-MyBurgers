@@ -1,3 +1,11 @@
+$tablets: 760px;
+$phones: 480px;
+@mixin tablets {
+  @media (max-width: $tablets) {
+      @content;
+      }
+  }
+
 .header {
     
     display        : flex;
@@ -17,4 +25,14 @@
 .hero__container {
     display: flex;
     
+}
+
+.header__menu {
+	flex        : 1;
+	text-align  : right;
+	margin-right: rem(20px);
+
+  @include tablets() {
+    display: none;
+  }
 }

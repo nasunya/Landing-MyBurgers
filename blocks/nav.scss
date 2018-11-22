@@ -7,6 +7,7 @@ $tablets: 760px;
     }
 .nav {
     margin-right: 0.9375rem;
+    
     @include tablets {
         display: none;
       }
@@ -39,20 +40,4 @@ $tablets: 760px;
         background   : #fff;
         margin       : 0 0.625rem;
     }
-}
-
-.to-next-section {
-    display        : block;
-    width          : 1.875rem;
-    height         : 0.9375rem;
-    background     : url("../icons/arrow-scroll.svg") center  no-repeat;
-    background-size: 1.875rem 0.9375rem;
-    margin-bottom  : 2.5rem;
-    position       : absolute;
-    top            : 90%;
-    left           : 50%;
-
-    @include tablets {
-        top: 90%;
-      }
 }
