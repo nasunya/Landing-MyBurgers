@@ -483,6 +483,11 @@ footer {
   color: #000;
 }
 
+.best__icon-pic {
+  width: 80px;
+  height: 80px;
+}
+
 .reviews {
   background: #000;
 }
