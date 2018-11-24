@@ -414,6 +414,7 @@ footer {
     -webkit-box-direction: initial;
         -ms-flex-direction: initial;
             flex-direction: initial;
+    padding-bottom: 20px;
   }
 }
 
@@ -438,7 +439,6 @@ footer {
 
 .best__text {
   font-family: Ubuntu;
-  font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.875rem;
   color: #2f3234;
@@ -644,10 +644,21 @@ footer {
 }
 
 .order__form-row {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-style: normal;
   margin-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 480px) {
+  .order__form-row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .order__form-label {
@@ -998,56 +1009,103 @@ footer {
   font-size: 14px;
 }
 
-.last {
-  background: url(../img/map-marker1.png) center center/cover no-repeat;
+.map {
+  background: url("../img/map-marker1.png") center center no-repeat;
+  background-size: cover;
 }
 
 .footer {
   position: absolute;
-  height: 4.375rem;
+  width: 100%;
   background: #000;
   bottom: 0;
   left: 0;
   right: 0;
-}
-
-.footer__adress {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 50%;
-  color: #fff;
-  font-weight: 300;
-  padding-bottom: 0.3125rem;
+  padding: 0.625rem 0;
 }
 
 .footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 0.3125rem;
-  height: 3.75rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 480px) {
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer__col {
+  width: 50%;
+  margin-bottom: 0.9375rem;
+}
+
+@media (max-width: 480px) {
+  .footer__col {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.footer__address {
+  color: #ffffff;
+  font-size: 0.875rem;
 }
 
 .footer__phone {
-  color: #e45028;
+  font-family: 'Ubuntu';
   font-weight: bold;
+  font-style: normal;
+  color: #e35028;
+  text-decoration: none;
+  font-size: 0.875rem;
 }
 
-.footer__phone-icon {
-  margin-right: 0.3125rem;
+.footer__col_right {
+  text-align: right;
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.socails__item {
-  color: white;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin-left: 1.25rem;
+@media (max-width: 480px) {
+  .footer__col_right {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
-.social__list {
-  width: 50%;
+.socials {
+  position: relative;
+  top: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.socails__link-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .socials {
@@ -1082,5 +1140,97 @@ footer {
   width: 1.25rem;
   height: 1.25rem;
   color: #fff;
+}
+
+.menu {
+  background: url("../img/photo-1428660386617-8d277e7deaf2.png") 50% no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.menu__title {
+  font-family: 'Gagalin-Regular';
+  font-weight: normal;
+  font-style: normal;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.menu-acco {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-acco__item {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-acco__item.active .menu-acco__trigger-text {
+  color: #f9b43b;
+}
+
+.section__title_white {
+  font-family: 'Gagalin-Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 4.5rem;
+  color: #fff;
+}
+
+.menu-acco__trigger {
+  width: 5rem;
+  display: block;
+  height: 100%;
+  float: left;
+  background: cover;
+  text-decoration: none;
+  position: relative;
+}
+
+.menu-acco__trigger-text {
+  font-family: 'Gagalin-Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2.5rem;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  -webkit-transform: rotate(-90deg) translateY(-50%);
+          transform: rotate(-90deg) translateY(-50%);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+  margin-top: -1.25rem;
+}
+
+.menu-acco__content {
+  height: 100%;
+  float: left;
+  background: rgba(47, 50, 52, 0.93);
+  width: 0;
+  overflow: hidden;
+}
+
+.menu-acco__text {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.875rem;
+  color: #fff;
+  padding: 3.75rem 1.875rem;
+  width: 100%;
+  line-height: 1.8;
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

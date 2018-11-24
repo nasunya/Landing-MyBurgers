@@ -46,10 +46,21 @@
 }
 
 .order__form-row {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-style: normal;
   margin-bottom: rem(16px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 480px) {
+  .order__form-row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .order__form-label {

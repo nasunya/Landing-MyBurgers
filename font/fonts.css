@@ -26,10 +26,5 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Ubuntu';
-  src: url("../font/gener/ubuntu-b-webfont.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
+@font-face {}
 /*# sourceMappingURL=fonts.css.map */
