@@ -46,11 +46,12 @@
                                 </ul>
                             </nav>
                         </div>
-                            <div class="header__links">
-                            <a href="#" class="btn btn--red">Заказать</a>
-                            <a href="#" class="hamburger-menu-link">
-                                <div href="#" class="hamburger-menu-link__bars"></div>
-                            </a> 
+                        <div class="header__links">
+                          <a href="#" class="btn btn--red">Заказать</a>
+                          <div class="hamburger-menu-link">
+                              <div class="hamburger-menu-link__bars">
+                              </div>
+                              </div>
                         </div>
                         </div>
                     </header>
@@ -215,7 +216,9 @@
                             <div class="slider__prise">
                               <span class="slider__prise-cost">500</span><span class="slider__prise-currency">рублей</span>
                             </div>
+                            <div class="slider__bth">
                             <a class="btn slider__btn-order" href="#order">Заказать</a>
+                          </div>
                           </div>
                         </div>
                       </li>
@@ -623,7 +626,10 @@
 
 
       <!--burger-menu-->
-      <div class="burger__menu" style="display: none">
+      <div class="burger__menu">
+          <div href="" class=" burger__logo">
+              <a href="#" class="logo"> <img src="./icons/logo.svg" alt="mr.burger logo" class="logo__icon"></a>
+           </div>
         <nav class="burger__nav">
             <ul class="burger__list">
                 <li class="burger__item">
@@ -649,8 +655,11 @@
                 </li>
             </ul>
         </nav>
+        <div class="burger__close">x</div>
     </div>
 
-      <script src="JS.script.js"></script>
+      <script src="script.js"></script>
 </body>
 </html>
+
+
