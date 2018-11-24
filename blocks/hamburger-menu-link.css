@@ -33,4 +33,22 @@
 .hamburger-menu-link__bars:before {
   top: 0;
 }
+
+.header__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hamburger-menu-link {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .hamburger-menu-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 /*# sourceMappingURL=hamburger-menu-link.css.map */

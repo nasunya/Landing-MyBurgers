@@ -49,3 +49,18 @@ $phones : 480px;
 
 }
 
+.header__links {
+    
+    display: flex;
+   
+}
+.hamburger-menu-link {
+   
+    display: none;
+
+@include phones 
+@include tablets {
+  display: flex;
+}
+}
+

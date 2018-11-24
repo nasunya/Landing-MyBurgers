@@ -1736,6 +1736,24 @@ footer {
   top: 0;
 }
 
+.header__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hamburger-menu-link {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .hamburger-menu-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .video {
   background: url(../img/BG-ideo.png) center/cover no-repeat;
 }
@@ -1764,6 +1782,10 @@ footer {
   padding-top: 0.75rem;
 }
 
+.burger__item {
+  position: relative;
+}
+
 .burger__link {
   font-family: 'Ubuntu';
   font-weight: 300;
@@ -1786,14 +1808,16 @@ footer {
   border-radius: 50%;
   background: #fff;
   margin: 0 0.625rem;
+  left: 50%;
+  position: absolute;
 }
 
-.burfer__item:last-child .burger__item:after {
+.burger__item:last-child .burger__item:after {
   display: none;
 }
 
 .burger__logo {
-  padding-left: 15px;
+  padding-left: 14px;
 }
 
 .burger__list {
@@ -1817,5 +1841,39 @@ footer {
   color: #fff;
   padding-right: 30px;
   font: 30px Helvetica, sans-serif;
+}
+
+.close {
+  display: block;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  position: absolute;
+  color: #fff;
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #fff;
+}
+
+.close:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.close:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 /*# sourceMappingURL=main.css.map */
