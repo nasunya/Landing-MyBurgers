@@ -129,7 +129,9 @@ $tablets: 760px;
   
 
 }
-
+.team-acco__item--active {
+  display: block;
+}
 
 .team-acco__text {
   color: #fff;
@@ -138,7 +140,7 @@ $tablets: 760px;
 
 
 
-.team-acco__item_active {
+.team-acco__item--active {
   .team-acco__trigger {
     
     color: $yellow;

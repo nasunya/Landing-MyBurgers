@@ -121,6 +121,14 @@
   left: rem(-9999px);
 }
 
+.order__radio-custom {
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
 .order__radio-fake {
   width: rem(16px);
   height: rem(16px);
@@ -178,7 +186,6 @@
 
 .order__form-button {
   font-family: 'Ubuntu';
-  font-weight: 300;
   font-style: normal;
   margin-right: rem(20px);
   border: 0;
@@ -192,6 +199,9 @@
 }
 
 .order__form-button_reset {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-style: normal;
   padding-left: 0;
   padding-right: 0;
   text-transform: none;

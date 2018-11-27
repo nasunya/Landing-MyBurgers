@@ -107,15 +107,22 @@ $phones: 480px;
     left    : rem(-9999px);
   }
 
-  
-
+.order__radio-custom {
+  position             : relative;
+  width                : 1rem;
+  height               : 1rem;
+  background-color     : #fff;
+  -webkit-border-radius: 50%;
+  border-radius        : 50%;
+}
   .order__radio-fake {
     width        : rem(16px);
     height       : rem(16px);
     border-radius: 50%;
     background   : #fff;
     position     : relative;
-    &:after {
+  }
+    .order__radio-fake:after {
       content      : "";
       display      : block;
       position     : absolute;
@@ -128,7 +135,7 @@ $phones: 480px;
       transform    : translate(-50%, -50%);
       transition   : width .3s, height .3s;
     }
-  }
+  
 
   .order__radio-elem:checked {
     &+.order__radio-fake {
@@ -170,8 +177,8 @@ $phones: 480px;
       }
 
       .order__form-button {
-        font-family   : 'Ubuntu';
-        font-weight   : 300;
+        font-family: 'Ubuntu';
+
         font-style    : normal;
         margin-right  : rem(20px);
         border        : 0;
@@ -185,6 +192,9 @@ $phones: 480px;
       }
       
       .order__form-button_reset {
+        font-family   : 'Ubuntu';
+        font-weight   : 300;
+        font-style    : normal;
         padding-left  : 0;
         padding-right : 0;
         text-transform: none;

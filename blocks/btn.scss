@@ -8,4 +8,7 @@ $red   : #e35028;
     color          : #fff;
     text-transform : uppercase;
     font-size      : 0.8125rem;
+    &:hover{
+        background: #c1401e;
+      }
 }

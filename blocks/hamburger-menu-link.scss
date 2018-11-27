@@ -16,45 +16,48 @@ $phones : 480px;
         }
     }
     
-.hamburger-menu-link {
-    vertical-align: middle;
-    position      : relative;
-    height        : 1.375rem;
-    align-items   : center;
-    margin-left   : 1.875rem;
-    display       : none;
-    @include tablets {
-        display: flex;
+
+
+    .humburger {
+        width       : rem(25px);
+        cursor      : pointer;
+        margin-left : rem(30px);
+        margin-right: rem(20px);
+        margin-top  : rem(5px);
+        display     : none;
+        top         : rem(34px);
+        right       : rem(15px);
+        z-index     : 100;
+      
+        @include tablets {
+          display       : flex;
+          flex-direction: column;
+        }
         
-    }
-}
+      
+        &__item {
+          height          : 4px;
+          margin-bottom   : rem(5px);
+          border-radius   : rem(4px);
+          background-color: #fff;
+          transition      : 0.8s;
+      
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+       
+      }
 
-.hamburger-menu-link__bars {
-    &, &:before, &:after {
-        background   : #fff;
-        width        : 1.5rem;
-        height       : 0.3125rem;
-        border-radius: 0.1875rem;
-    }
 
-     &:before, &:after, {
-        content : "";
-        display : block;
-        position: absolute;
-    }
 
-    &:before {
-        top: 0;
-    }
-
-}
 
 .header__links {
     
     display: flex;
    
 }
-.hamburger-menu-link {
+.hamburger {
    
     display: none;
 
