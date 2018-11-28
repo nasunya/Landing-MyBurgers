@@ -146,12 +146,13 @@
 
             <section id="burgers" class="section burgers">
                 <div class="container burgers__container">
-                  <div class="slider">
+                  <div class="slider"  id="slider">
                     <div class="slider__switch">
-                      <a class="slider__arrow slider__arrow-left" id="left" href="#burgers"></a>
+                      <a class=" slider__control  slider__arrow slider__arrow-left arrow-prev"></a>
                     </div>
+                    <div class="slider__wrap">
                     <ul class="slider__list id="items">
-                      <li class="slider__item">
+                      <li class="slider__item active">
                         <div class="slider__comp">Состав</div>
                         <table class="slider__comp-list">
                           <tr>
@@ -301,10 +302,161 @@
                             </div>
                           </div>
                         </li>
+                        <li class="slider__item">
+                            <div class="slider__comp">Состав</div>
+                            <table class="slider__comp-list">
+                              <tr>
+                                <td>
+                                  <svg class="slider__comp-icon">
+                                    <use xlink:href="./icons/sprite.svg#beef"></use>
+                                  </svg>
+                                </td>
+                                <td>Говядина</td><td>300 г</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <svg class="slider__comp-icon">
+                                    <use xlink:href="./icons/sprite.svg#buns"></use>
+                                  </svg>
+                                </td>
+                                <td>Булочки</td><td>100 г</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <svg class="slider__comp-icon">
+                                    <use xlink:href="./icons/sprite.svg#salad"></use>
+                                  </svg>
+                                </td>
+                                <td>Зелень</td><td>70 г</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <svg class="slider__comp-icon">
+                                    <use xlink:href="./icons/sprite.svg#sauce"></use>
+                                  </svg>
+                                </td>
+                                <td>Соус</td><td>150 г</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <svg class="slider__comp-icon">
+                                    <use xlink:href="./icons/sprite.svg#cucumber"></use>
+                                  </svg>
+                                </td>
+                                <td>Овощи</td><td>200 г</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <svg class="slider__comp-icon">
+                                    <use xlink:href="./icons/sprite.svg#cheese"></use>
+                                  </svg>
+                                </td>
+                                <td>Сыр</td><td>80 г</td>
+                              </tr>
+                              <tr class="close-table"></tr>
+                            </table>
+                            <div class="slider__calorie">
+                              <span class="slider__calorie-text slider__calorie-sum">1200</span>
+                              <span class="slider__calorie-text slider__calorie-unit">ККАЛ</span>
+                            </div>
+                            <div class="slider__left">
+                              <img class="slider__img" src="./img/Бургер+с+чернилами+каракатицы.png" alt="">
+                            </div>
+                            <div class="slider__right">
+                              <h2  class="sec_title section__title_white burgers__title">Dark Beef Burger</h2>
+                              <div class="slider__text">
+                                <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско</p>
+                              </div>
+                              <div class="slider__options">
+                                <div class="slider__prise">
+                                  <span class="slider__prise-cost">500</span><span class="slider__prise-currency">рублей</span>
+                                </div>
+                                <div class="slider__bth">
+                                <a class="btn slider__btn-order" href="#order">Заказать</a>
+                              </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="slider__item">
+                              <div class="slider__comp">Состав</div>
+                              <table class="slider__comp-list">
+                                <tr>
+                                  <td>
+                                    <svg class="slider__comp-icon">
+                                      <use xlink:href="./icons/sprite.svg#beef"></use>
+                                    </svg>
+                                  </td>
+                                  <td>Говядина</td><td>300 г</td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <svg class="slider__comp-icon">
+                                      <use xlink:href="./icons/sprite.svg#buns"></use>
+                                    </svg>
+                                  </td>
+                                  <td>Булочки</td><td>100 г</td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <svg class="slider__comp-icon">
+                                      <use xlink:href="./icons/sprite.svg#salad"></use>
+                                    </svg>
+                                  </td>
+                                  <td>Зелень</td><td>70 г</td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <svg class="slider__comp-icon">
+                                      <use xlink:href="./icons/sprite.svg#sauce"></use>
+                                    </svg>
+                                  </td>
+                                  <td>Соус</td><td>150 г</td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <svg class="slider__comp-icon">
+                                      <use xlink:href="./icons/sprite.svg#cucumber"></use>
+                                    </svg>
+                                  </td>
+                                  <td>Овощи</td><td>200 г</td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <svg class="slider__comp-icon">
+                                      <use xlink:href="./icons/sprite.svg#cheese"></use>
+                                    </svg>
+                                  </td>
+                                  <td>Сыр</td><td>80 г</td>
+                                </tr>
+                                <tr class="close-table"></tr>
+                              </table>
+                              <div class="slider__calorie">
+                                <span class="slider__calorie-text slider__calorie-sum">1200</span>
+                                <span class="slider__calorie-text slider__calorie-unit">ККАЛ</span>
+                              </div>
+                              <div class="slider__left">
+                                <img class="slider__img" src="./img/Бургер+с+чернилами+каракатицы.png" alt="">
+                              </div>
+                              <div class="slider__right">
+                                <h2  class="sec_title section__title_white burgers__title">Dark Beef Burger</h2>
+                                <div class="slider__text">
+                                  <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско</p>
+                                </div>
+                                <div class="slider__options">
+                                  <div class="slider__prise">
+                                    <span class="slider__prise-cost">500</span><span class="slider__prise-currency">рублей</span>
+                                  </div>
+                                  <div class="slider__bth">
+                                  <a class="btn slider__btn-order" href="#order">Заказать</a>
+                                </div>
+                                </div>
+                              </div>
+                            </li>
                    
                     </ul>
+                    </div>
                     <div class="slider__switch">
-                      <a class="slider__arrow slider__arrow-right" id="right" href="#burgers"></a>
+                      <a class="slider__arrow slider__arrow-right slider__control" ></a>
                     </div>
                   </div>
                 </div>
@@ -557,7 +709,7 @@
              <section class="section order">
                             <div class="container">
                               <div class="title section__title">Закажите доставку</div>
-                              <form class="order__form-tag" id="order-form">
+                              <form class="order__form-tag" id="myform">
                                 <div class="order__form">
                                     <div class="order__form-col">
                                     <div class="order__form-row">

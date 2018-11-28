@@ -1406,6 +1406,13 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .slider {
+    height: 100%;
+  }
 }
 
 .slider__arrow {
@@ -1429,6 +1436,19 @@ footer {
           transform: rotate(90deg) scale(1.2);
 }
 
+@media (max-width: 760px) {
+  .slider__arrow-left {
+    left: 1.375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider__arrow-left {
+    left: 0rem;
+    position: absolute;
+  }
+}
+
 .slider__arrow-right {
   right: -4.5rem;
   -webkit-transform: rotate(-90deg);
@@ -1440,6 +1460,19 @@ footer {
 .slider__arrow-right:hover {
   -webkit-transform: rotate(-90deg) scale(1.2);
           transform: rotate(-90deg) scale(1.2);
+}
+
+@media (max-width: 760px) {
+  .slider__arrow-right {
+    right: 1.375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider__arrow-right {
+    right: 0rem;
+    position: absolute;
+  }
 }
 
 .slider__item {
@@ -1537,6 +1570,28 @@ footer {
   font-family: 'Ubuntu';
   font-weight: 500;
   font-style: normal;
+}
+
+.slider__wrap {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow: hidden;
+}
+
+@media (max-width: 760px) {
+  .slider__wrap {
+    height: 80%;
+  }
+}
+
+.slider__control {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
 }
 
 .slider__comp {
@@ -1666,12 +1721,41 @@ footer {
             align-items: center;
   }
   .burgers__container .slider__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-left: 1.5625rem;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 760px) {
+  .burgers__container .slider__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
+}
+
+@media (max-width: 768px) and (max-width: 480px) {
+  .burgers__container .slider__item {
+    padding: 0;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
   .burgers__container .slider__calorie {
     top: 0;
     right: 0;
@@ -1687,6 +1771,33 @@ footer {
 
 .slider__bth {
   padding-bottom: 30px;
+}
+
+.slider__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+@media (max-width: 760px) {
+  .slider__list {
+    height: 100%;
+  }
+}
+
+.slider__item {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
 }
 
 .fixed-menu {

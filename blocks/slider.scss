@@ -29,6 +29,11 @@ $phones: 480px;
     display        : flex;
     justify-content: center;
     align-items    : center;
+    width          : 100%;
+    @include tablets{
+      height: 100%;
+      }
+    
   
   &__arrow {
     position  : absolute;
@@ -44,6 +49,13 @@ $phones: 480px;
       &:hover {
         transform: rotate(90deg) scale(1.2);
       }
+      @include tablets {
+        left: rem(22px);
+      }
+      @include phones {
+        left    : rem(0px);
+        position: absolute;
+      }
     }
     &-right {
       right     : -4.5rem;
@@ -51,6 +63,13 @@ $phones: 480px;
       transition: .3s;
       &:hover {
         transform: rotate(-90deg) scale(1.2);
+      }
+      @include tablets {
+        right: rem(22px);
+      }
+      @include phones {
+        right   : rem(0px);
+        position: absolute;
       }
     }
   }
@@ -129,6 +148,23 @@ $phones: 480px;
   }
 }
 
+
+.slider__wrap {
+  flex    : 1;
+  overflow: hidden;
+
+  @include tablets{
+    height: 80%;
+  }
+  
+}
+
+.slider__control {
+  position: relative;
+  z-index : 1;
+  display : flex;
+  cursor  : pointer;
+}
 .slider__comp {
   position        : absolute;
   top             : 0;
@@ -256,8 +292,21 @@ $phones: 480px;
     }
     
     .slider__item {
-      flex-direction: column;
-      text-align    : center;
+      display    : flex;
+      overflow   : hidden;
+      flex       : 1;
+      margin-left: rem(25px);
+    
+      @include tablets {
+        flex-direction : column;
+        align-items    : center;
+        height         : 100%;
+        justify-content: center;
+      }
+      @include phones {
+        padding    : 0;
+        margin-left: 0;
+      }
     }
 
     .slider__calorie {
@@ -278,9 +327,15 @@ $phones: 480px;
   padding-bottom: 30px;
 }
 
-// .slider__bth {
-//   padding-bottom: 30px;
-// }
+.slider__list {
+  display   : flex;
+  transition: 1s;
+
+  @include tablets{
+    height: 100%;
+  }
+}
+
 
 // .slider__item {
 //   width         : 100%;
