@@ -42,12 +42,11 @@
   display: block;
   border-radius: 50%;
   background: #fff;
-  margin: 0 0.625rem;
   left: 50%;
   position: absolute;
 }
 
-.burger__item:last-child .burger__item:after {
+.burger__item:last-child .burger__link:after {
   display: none;
 }
 

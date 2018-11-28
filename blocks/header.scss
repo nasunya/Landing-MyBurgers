@@ -29,11 +29,17 @@ $phones: 480px;
 }
 
 .header__menu {
-	flex        : 1;
-	text-align  : right;
-	margin-right: rem(20px);
+	flex      : 1;
+	text-align: right;
+	
 
   @include tablets() {
     display: none;
   }
+}
+
+.btn--red {
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-style : normal;
 }

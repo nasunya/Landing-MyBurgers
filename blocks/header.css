@@ -34,12 +34,17 @@
       -ms-flex: 1;
           flex: 1;
   text-align: right;
-  margin-right: rem(20px);
 }
 
 @media (max-width: 760px) {
   .header__menu {
     display: none;
   }
+}
+
+.btn--red {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-style: normal;
 }
 /*# sourceMappingURL=header.css.map */

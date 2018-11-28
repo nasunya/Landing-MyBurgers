@@ -137,15 +137,14 @@ $phones: 480px;
   width           : 5.625rem;
   height          : 5.625rem;
   border-radius   : 0.3125rem;
-  
-  font-family   : 'Gagalin-Regular';
-  font-weight   : normal;
-  font-style    : normal;
-  font-size     : 0.875rem;
-  text-transform: uppercase;
-  color         : white;
-  text-align    : center;
-  line-height   : 9rem;
+  font-family     : 'Gagalin-Regular';
+  font-weight     : normal;
+  font-style      : normal;
+  font-size       : 0.875rem;
+  text-transform  : uppercase;
+  color           : white;
+  text-align      : center;
+  line-height     : 9rem;
   
   &:hover {
     background-color: #e35028;
@@ -205,14 +204,13 @@ $phones: 480px;
     height: 2.5rem;
 }
 .slider__calorie {
-  position     : absolute;
-  bottom       : 0;
-  left         : 0;
-  background   : url("/icons/kkal.svg") center 0.9375rem no-repeat;
-  width        : 5.625rem;
-  height       : 5.625rem;
-  border-radius: 0.3125rem;
-  
+  position      : absolute;
+  bottom        : 0;
+  left          : 0;
+  background    : url("/icons/kkal.svg") center 0.9375rem no-repeat;
+  width         : 5.625rem;
+  height        : 5.625rem;
+  border-radius : 0.3125rem;
   font-family   : 'Gagalin-Regular';
   font-weight   : normal;
   font-size     : 0.875rem;
@@ -280,20 +278,25 @@ $phones: 480px;
   padding-bottom: 30px;
 }
 
-// .slider__item {
-//   width : 100%;
-//   height: 100%;
-//  // display       : flex;
-//   display: inline-block;
+// .slider__bth {
+//   padding-bottom: 30px;
 // }
+
+// .slider__item {
+//   width         : 100%;
+//   height        : 100vh;
+//   display       : flex;
+//   flex-direction: row;
+//   position      : relative;
+  
+// }
+
 // .slider__list {
 //   white-space: nowrap;
 //   font-size  : 0;
 //   position   : absolute;
 //   top        : 0;
 //   left       : 0;
+//   overflow   : hidden;
 // }
 
-// .slider {
-//   overflow: hidden;
-// }

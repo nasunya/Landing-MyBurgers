@@ -118,6 +118,7 @@ $phones: 480px;
 
       .review__view {
         border-radius   : rem(5px);
+        border          : #141414;
         background-color: rgb(47, 50, 52);
         padding         : rem(8px) rem(12px);
         display         : inline-block;
@@ -138,16 +139,22 @@ $phones: 480px;
 
 
       .overlay {
-        position  : absolute;
-        top       : 0;
-        width     : 100%;
-        height    : 100vh;
-        background: rgba(1, 1, 1, 0.8);
-        overflow  : hidden;
-        display   : none;
+        position       : fixed;
+        top            : 0;
+        left           : 0;
+        right          : 0;
+        bottom         : 0;
+        background     : rgba(8, 8, 8, 0.39);
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        z-index        : 10000;
+        display        : none;
+
+        
     }
       .popup {
-        background: #fff;
+        background: #444;
         display   : block;
         position  : absolute;
         top       : 50%;
@@ -156,4 +163,32 @@ $phones: 480px;
         width     : 35%;
         height    : 250px;
         z-index   : 100;
+      }
+
+      .popup__close {
+        font           : 16px Helvetica, sans-serif;
+        color          : #fff;
+        position       : absolute;
+        right          : -5px;
+        top            : -10px;
+        background     : #d00;
+        border-radius  : 50%;
+        width          : 20px;
+        height         : 20px;
+        line-height    : 20px;
+        text-align     : center;
+        text-decoration: none;
+        cursor         : pointer;
+      }
+      
+      .popup__text {
+        color        : #fff;
+        font-family  : 'Ubuntu';
+        font-weight  : 300;
+        font-style   : normal;
+        color        : #ffffff;
+        font-size    : 0.875rem;
+        margin-bottom: 0.8125rem;
+        line-height  : 1.8;
+        padding      : 20px;
       }

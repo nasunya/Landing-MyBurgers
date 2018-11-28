@@ -108,6 +108,21 @@ if (element.tagName === "BUTTON") {// при нажатии выводит им�
       }
 
       });
+      
+      const closeElement = overlay.querySelector('.popup__close');  // получаем доступ к кнопке
+
+      overlay.addEventListener("click", e => { // чтобы при клике на любую часть экрана закрылось окно
+        if (e.target === overlay) {// у каждого события есть свойство target , который указывает на какой элемент вообще происходил кликю. если кликнули на оверлей, то закоываем его
+          closeElement.click();
+        }
+      });
+
+      closeElement.addEventListener('click', function(event) {
+        event.preventDefault ();
+        document.body.removeChild(overlay);// убираем элемент из дом дерево
+      });
+
+        
       document.addEventListener('keyup', e => {
       let keyName = e.keyCode;
 
@@ -117,7 +132,13 @@ if (element.tagName === "BUTTON") {// при нажатии выводит им�
       });
 
 
+    
 
+    
+
+
+
+// слайдер
 
 
 
