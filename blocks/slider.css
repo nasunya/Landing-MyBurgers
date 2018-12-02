@@ -14,17 +14,11 @@
 }
 
 .slider {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 @media (max-width: 760px) {
@@ -121,6 +115,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .slider__img {
@@ -191,9 +186,6 @@
 }
 
 .slider__wrap {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   overflow: hidden;
 }
 
@@ -293,7 +285,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  background: url("/icons/kkal.svg") center 0.9375rem no-repeat;
+  background: url("../icons/kkal.svg") center 0.9375rem no-repeat;
   width: 5.625rem;
   height: 5.625rem;
   border-radius: 0.3125rem;
@@ -395,13 +387,22 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: right .5s;
+  transition: right .5s;
+  right: 0;
+  position: relative;
 }
 
 @media (max-width: 760px) {
   .slider__list {
     height: 100%;
   }
+}
+
+.slider__item {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=slider.css.map */

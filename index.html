@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="./img/favicon.ico" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="./normalize/normalize.css">
     <link rel="stylesheet" href="./css/main.css">
     <title>My Burgers</title>
@@ -23,32 +24,33 @@
                               <nav class="nav">
                                   <ul class="nav__list">
                                       <li class="nav__item">
-                                          <a href="#" class="nav__link">О нас</a>
+                                          <a href="#" class="nav__link" data-scroll-to="1">О нас</a>
                                       </li>
                                       <li class="nav__item">
-                                          <a href="#" class="nav__link">Бургеры</a>
+                                          <a href="#" class="nav__link" data-scroll-to="2">Бургеры</a>
                                       </li>
                                       <li class="nav__item">
-                                          <a href="#" class="nav__link">Команда</a>
+                                          <a href="#" class="nav__link" data-scroll-to="3">Команда</a>
                                       </li>
                                       <li class="nav__item">
-                                          <a href="#" class="nav__link">Меню</a>
+                                          <a href="#" class="nav__link" data-scroll-to="4">Меню</a>
                                       </li>
                                       <li class="nav__item">
-                                          <a href="#" class="nav__link">Отзывы</a>
+                                          <a href="#" class="nav__link" data-scroll-to="5">Отзывы</a>
                                       </li>
                                       <li class="nav__item">
-                                          <a href="#" class="nav__link">Как мы работаем</a>
+                                          <a href="#" class="nav__link" data-scroll-to="6">Как мы работаем</a>
                                       </li>
                                       <li class="nav__item">
-                                          <a href="#" class="nav__link">Контакты</a>
+                                          <a href="#" class="nav__link" data-scroll-to="8">Контакты</a>
                                       </li>
                                   </ul>
                               </nav>
                             </div>
-                        </div>
+                        
                           <div class="header__links">
-                            <a href="#" class="btn btn--red">Заказать</a>
+                            <a href="#" class="btn btn--red" data-scroll-to="7">Заказать</a>
+                          </div>
                             <div class="hamburger-menu-link">
                               <ul class="humburger" id="humburger">
                                 <li class="humburger__item"></li>
@@ -147,13 +149,15 @@
             <section id="burgers" class="section burgers">
                 <div class="container burgers__container">
                   <div class="slider"  id="slider">
-                    <div class="slider__switch">
+                    <div class="slider__left-arrow">
                       <a class=" slider__control  slider__arrow slider__arrow-left arrow-prev"></a>
                     </div>
                     <div class="slider__wrap">
                     <ul class="slider__list id="items">
                       <li class="slider__item active">
-                        <div class="slider__comp">Состав</div>
+                      
+                        <div class="slider__left">
+                            <div class="slider__comp">Состав</div>
                         <table class="slider__comp-list">
                           <tr>
                             <td>
@@ -209,7 +213,6 @@
                           <span class="slider__calorie-text slider__calorie-sum">1200</span>
                           <span class="slider__calorie-text slider__calorie-unit">ККАЛ</span>
                         </div>
-                        <div class="slider__left">
                           <img class="slider__img" src="./img/Бургер+с+чернилами+каракатицы.png" alt="">
                         </div>
                         <div class="slider__right">
@@ -227,8 +230,10 @@
                           </div>
                         </div>
                       </li>
-                      <li class="slider__item">
-                          <div class="slider__comp">Состав</div>
+                      <li class="slider__item active">
+                      
+                          <div class="slider__left">
+                              <div class="slider__comp">Состав</div>
                           <table class="slider__comp-list">
                             <tr>
                               <td>
@@ -284,7 +289,6 @@
                             <span class="slider__calorie-text slider__calorie-sum">1200</span>
                             <span class="slider__calorie-text slider__calorie-unit">ККАЛ</span>
                           </div>
-                          <div class="slider__left">
                             <img class="slider__img" src="./img/Бургер+с+чернилами+каракатицы.png" alt="">
                           </div>
                           <div class="slider__right">
@@ -302,8 +306,10 @@
                             </div>
                           </div>
                         </li>
-                        <li class="slider__item">
-                            <div class="slider__comp">Состав</div>
+                        <li class="slider__item active">
+                      
+                            <div class="slider__left">
+                                <div class="slider__comp">Состав</div>
                             <table class="slider__comp-list">
                               <tr>
                                 <td>
@@ -359,7 +365,6 @@
                               <span class="slider__calorie-text slider__calorie-sum">1200</span>
                               <span class="slider__calorie-text slider__calorie-unit">ККАЛ</span>
                             </div>
-                            <div class="slider__left">
                               <img class="slider__img" src="./img/Бургер+с+чернилами+каракатицы.png" alt="">
                             </div>
                             <div class="slider__right">
@@ -377,8 +382,10 @@
                               </div>
                             </div>
                           </li>
-                          <li class="slider__item">
-                              <div class="slider__comp">Состав</div>
+                          <li class="slider__item active">
+                      
+                              <div class="slider__left">
+                                  <div class="slider__comp">Состав</div>
                               <table class="slider__comp-list">
                                 <tr>
                                   <td>
@@ -434,7 +441,6 @@
                                 <span class="slider__calorie-text slider__calorie-sum">1200</span>
                                 <span class="slider__calorie-text slider__calorie-unit">ККАЛ</span>
                               </div>
-                              <div class="slider__left">
                                 <img class="slider__img" src="./img/Бургер+с+чернилами+каракатицы.png" alt="">
                               </div>
                               <div class="slider__right">
@@ -455,7 +461,7 @@
                    
                     </ul>
                     </div>
-                    <div class="slider__switch">
+                    <div class="slider__right-arrow">
                       <a class="slider__arrow slider__arrow-right slider__control" ></a>
                     </div>
                   </div>
@@ -702,7 +708,26 @@
                       <section class="section video">
                         <div class="container">
                           <div class="title title-video">Как мы работаем</div>
-                
+                            <div class="player hidden">
+                              <div class="player__wrapper active">
+                                <div id="yt-player"></div>
+                                  <div class="player__splash"></div>
+                              </div>
+                              <div class="player__controls">
+                                <button class="player__start paused"></button>
+                                <div class="player__playback">
+                                  <button class="player__playback-button"></button>
+                                </div>
+                                <div class="player__volume">
+                                    <svg class="player__volume-img">
+                                      <use xlink:href="./icons/sprite.svg#volum">
+                                    </svg>
+                                  </div>
+                                  <div class="player__volumeline">
+                                      <button class="player__volumeline-button"></button>
+                                    </div>
+                              </div>
+                            </div>
                         </div>
                       </section>
 
@@ -715,11 +740,11 @@
                                     <div class="order__form-row">
                                       <label class="order__form-block">
                                         <div class="order__form-label">Имя</div>
-                                        <input class="order__form-input" name="name" type="text" placeholder="">
+                                        <input class="order__form-input" name="name" type="text" placeholder="Имя">
                                       </label>
                                       <label class="order__form-block">
                                         <div class="order__form-label">Телефон</div>
-                                        <input class="order__form-input phone-mask" name="phone" type="text" placeholder="">
+                                        <input class="order__form-input phone-mask" name="phone" type="text" placeholder="Телефон">
                                       </label>
                                     </div>
                                     <div class="order__form-row">
@@ -751,7 +776,7 @@
                                     <div class="order__form-row">
                                       <label class="order__form-block">
                                         <div class="order__form-label">Комментарий</div>
-                                        <textarea class="order__form-input order__form-input_textarea" name="comment"></textarea>
+                                        <textarea class="order__form-input order__form-input_textarea" placeholder="Укажите детали к заказу" name="comment"></textarea>
                                       </label>
                                     </div>
                                     <div class="order__form-buttons">
@@ -789,9 +814,13 @@
            
                    
 
-             
-                          <section class="section map">
-                              <footer class="footer">
+             <!-- contacts section -->
+    <section class="contacts section" id="contacts">
+                          <section class="section ">
+                             <!-- interactive map -->
+                               <div id="map" class="map"></div>
+                                    <footer class="footer">
+
                                 <div class="container footer__container">
                                   <div class="footer__col">
                                     <div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
@@ -841,31 +870,31 @@
     <!--.fixed-menu-->
     <ul class="fixed-menu">
         <li class="fixed-menu__item active">
-          <a href="#" class="fixed-menu__link "></a>
+          <a href="#" data-scroll-to="" class="fixed-menu__link "></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="1" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="2" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="3" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="4" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="5" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="6" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="7" class="fixed-menu__link"></a>
         </li>
         <li class="fixed-menu__item">
-          <a href="#" class="fixed-menu__link"></a>
+          <a href="#" data-scroll-to="8" class="fixed-menu__link"></a>
         </li>
       </ul>
 
@@ -878,7 +907,7 @@
         <nav class="burger__nav">
             <ul class="burger__list">
                 <li class="burger__item">
-                    <a href="#" class="burger__link">О нас</a>
+                    <a href="#" class="burger__link ">О нас</a>
                 </li>
                 <li class="burger__item">
                     <a href="#" class="burger__link">Бургеры</a>
@@ -911,7 +940,14 @@
       </div>
      </div>
    </div>
-      <script src="script.js"></script>
+   
+     <script src="main.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+   <script src="https://www.youtube.com/iframe_api"></script>
+   <script src="https://api-maps.yandex.ru/2.1/?apikey=a339fef4-2d18-47bc-b48e-d922c32c8f12&lang=ru_RU" type="text/javascript"></script>
+     <script src="script.js"></script>
+      
       
 </body>
 </html>

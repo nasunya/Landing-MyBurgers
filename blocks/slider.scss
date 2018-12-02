@@ -25,11 +25,10 @@ $phones: 480px;
     align-items    : center;
   }
   .slider {
-    position       : relative;
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-    width          : 100%;
+    align-items  : center;
+    align-content: center;
+   
+    
     @include tablets{
       height: 100%;
       }
@@ -93,6 +92,7 @@ $phones: 480px;
     display        : flex;
     justify-content: center;
     align-items    : center;
+    position       : relative;
   }
   
   &__img {
@@ -100,12 +100,7 @@ $phones: 480px;
     max-height: 100%;
   }
   
-  &__right {
-    display        : flex;
-    justify-content: center;
-    align-items    : flex-start;
-    flex-direction : column;
-  }
+  
   
   &__text {
     font-family: 'Ubuntu';
@@ -150,7 +145,7 @@ $phones: 480px;
 
 
 .slider__wrap {
-  flex    : 1;
+  
   overflow: hidden;
 
   @include tablets{
@@ -243,7 +238,7 @@ $phones: 480px;
   position      : absolute;
   bottom        : 0;
   left          : 0;
-  background    : url("/icons/kkal.svg") center 0.9375rem no-repeat;
+  background    : url("../icons/kkal.svg") center 0.9375rem no-repeat;
   width         : 5.625rem;
   height        : 5.625rem;
   border-radius : 0.3125rem;
@@ -253,8 +248,7 @@ $phones: 480px;
   text-transform: uppercase;
   color         : white;
   text-align    : center;
-  
-  opacity: .5;
+  opacity       : .5;
 }
 
 .slider__calorie-text {
@@ -329,7 +323,9 @@ $phones: 480px;
 
 .slider__list {
   display   : flex;
-  transition: 1s;
+  transition: right .5s;
+  right     : 0;          //чепез js поставить
+  position  : relative;
 
   @include tablets{
     height: 100%;
@@ -337,14 +333,10 @@ $phones: 480px;
 }
 
 
-// .slider__item {
-//   width         : 100%;
-//   height        : 100vh;
-//   display       : flex;
-//   flex-direction: row;
-//   position      : relative;
-  
-// }
+ .slider__item {
+ min-width: 100%;
+ display  : flex;
+ }
 
 // .slider__list {
 //   white-space: nowrap;
