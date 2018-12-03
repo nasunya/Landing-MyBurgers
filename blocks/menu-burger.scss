@@ -25,7 +25,7 @@
   font-style     : normal;
   text-decoration: none;
   color          : #fff;
-  font-size      : 20px;
+  font-size      : 18px;
   text-transform : uppercase;
   display        : flex;
   padding        : 25px 0;
@@ -54,15 +54,15 @@
 .burger__list {
   display        : flex;
   flex-direction : column;
-  padding-top    : 30px;
   justify-content: center;
   align-items    : center;
 }
 
 .burger__close {
-  color        : #fff;
-  padding-right: 30px;
-  font         : 30px Helvetica, sans-serif;
+  color  : #fff;
+  display: flex;
+  flex   : 1;
+  font   : 30px Helvetica, sans-serif;
  
 }
 .close {
@@ -91,4 +91,16 @@
 }
 .close:after {
   transform: rotate(-45deg);
+}
+
+.burger__nav {
+  display        : flex;
+  flex           : 1;
+  align-items    : center;
+  justify-content: center;
+
+}
+.burger__logo {
+  display: flex;
+  flex   : 1;
 }
