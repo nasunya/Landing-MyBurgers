@@ -50,10 +50,6 @@
   display: none;
 }
 
-.burger__logo {
-  padding-left: 14px;
-}
-
 .burger__list {
   display: -webkit-box;
   display: -ms-flexbox;

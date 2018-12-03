@@ -117,14 +117,6 @@ if (element.tagName === "BUTTON") {// при нажатии выводит им�
         }
       });
 
-      closeElement.addEventListener('click', function(event) {
-        event.preventDefault ();
-        document.body.removeChild(overlay);// убираем элемент из дом дерево
-      });
-    
-
-     
-      
       document.addEventListener('keyup', e => {
       let keyName = e.keyCode;
 
@@ -138,194 +130,207 @@ if (element.tagName === "BUTTON") {// при нажатии выводит им�
 const sections = $(".section");
 const display  = $(".maincontent");
 let   inScroll = false;
-const md       = new MobileDetect(window.navigator.userAgent);
 
-const isMobile = md.mobile();
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile     = mobileDetect.mobile();
 
 const setActiveMenuItem = itemEq => {
-  $(".fixed-menu__item")
-  .eq(itemEq)
-  .addClass("active")
-  .siblings()
-  .removeClass("active");
-};
-
+  $('.fixed-menu__item').eq(itemEq).addClass('active')
+    .siblings().removeClass('active')
+} 
 
 const performTransition = sectionEq => {
-const position                = `${sectionEq * -100}%`;
-const mouseInertionIsFinished = 300;
-const transitionIsFinished    = 1000;
+  const position = `${sectionEq * -100}%`;
 
-if (inScroll === false) {
+  if (inScroll) return;
 
   inScroll = true;
-  display.css({
-  transform: `translateY(${position})`
-  });
-  
+
   sections
-  .eq(sectionEq)
-  .addClass("active")
-  .siblings()
-  .removeClass("active");
+    .eq(sectionEq)
+    .addClass("active")
+    .siblings()
+    .removeClass("active");
 
-  setTimeout (() => {
+  display.css({
+    transform          : `translate(0, ${position})`,
+    "-webkit-transform": `translate(0, ${position})`
+  });
+
+  setTimeout(() => {
     inScroll = false;
-
     setActiveMenuItem(sectionEq);
-
-  }, transitionIsFinished +  mouseInertionIsFinished);
-}
+  }, 1300); // продолжительность анимации + 300ms - потому что закончится инерция
 };
 
-  const scrollToSection = direction => {
+const scrollToSection = direction => {
   const activeSection = sections.filter(".active");
-  const prevSection   = activeSection.prev();
   const nextSection   = activeSection.next();
+  const prevSection   = activeSection.prev();
 
- if (direction === "up" && prevSection.length) {
-   performTransition(prevSection.index());
+  if (direction === "up" && prevSection.length) {
+    performTransition(prevSection.index());
+  }
 
- }
-
- if (direction === "down" && nextSection.length) {
-  performTransition(nextSection.index());
-
- }
+  if (direction === "down" && nextSection.length) {
+    performTransition(nextSection.index());
+  }
 };
 
-$(document).on("wheel", e => {
+$(document).on({
+  wheel: e => {
+    const deltaY    = e.originalEvent.deltaY;
+    const direction = deltaY > 0 ? "down" : "up";
 
-  const deltaY = e.originalEvent.deltaY;
+    scrollToSection(direction);
+  },
+  keydown: e => {
+    switch (e.keyCode) {
+      case 40: 
+        scrollToSection("down");
+        break;
 
-  if (deltaY > 0) {
+      case 38: 
+        scrollToSection("up");
+        break;
+    }
+  },
+  touchmove: e => e.preventDefault()
 
-    console.log('Вниз');
-    scrollToSection("down");
-  }
-
-  if (deltaY < 0) { 
-    console.log('Вверх');
-    scrollToSection("up");
-  }
+  // touchstart touchend touchmove 
 });
 
-$(document).on('keydown', e => {
 
-  switch(e.keyCode) {
-    case 40: 
-    scrollToSection("down");
-    break;
-    case 38: 
-    scrollToSection("up");
-    break;
-  }
-
-  touchhmove: e => e.preventDefault
-});
-
-$('[data-scroll-to]').on('click', e=>{
+$('[data-scroll-to]').on('click', e => {
   e.preventDefault();
-  
-  const target = $(e.currentTarget)
-  .attr("data-scroll-to");
+
+  const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+
+
   performTransition(target);
-});
+
+})
 
 if (isMobile) {
   $(document).swipe({
-  swipe: function(
-    event, 
-    direction, 
-    distance, 
-    duration, 
-    fingerCount, 
-    fingerData
-
-
-) {
-
-    const scrollDirection = direction === "down" ? "up" : "down";
-    scrollToSection(scrollDirection);
-  }
-});
-
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+      /**
+       * плагин возвращает фактическое...
+       * ...
+       */
+      const scrollDirection = direction === 'down' ? 'up' : 'down';
+      
+      scrollToSection(scrollDirection);
+    }
+  });
 }
+
+
+
 
 
 // -----Видео плеер--------
 
 let player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('yt-player', {
-          height    : '405',
-          width     : '660',
-          videoId   : 'M7lc1UVf-VE',
-          playerVars: {
-            controls      : 0,
-            disablekb     : 0,
-            modestbranding: 0,
-            rel           : 0,
-            autoplay      : 0,
-            showinfo      : 0
-          },
-          events : {
-          onReady      : onPlayerReady,
-          onStateChange: onPlayerStateChange
-          }
-        });
-      }
 
-  function onPlayerStateChange (event) {
-     switch(event.data) {
-       case 1: 
-       
-       $('.player__start').addClass('paused');
-       $('.player__wrapper').addClass('active');
-       break;
-       case 2: 
-       $('.player__start').removeClass('paused');
-     }
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player("yt-player", {
+    width     : "660",
+    height    : "405",
+    videoId   : "zmg_jOwa9Fc",
+    playerVars: {
+      controls      : 0,
+      disablekb     : 0,
+      showinfo      : 0,
+      rel           : 0,
+      autoplay      : 0,
+      modestbranding: 0
+    },
+    events: {
+      onReady      : onPlayerReady,
+      onStateChange: onPlayerStateChange
+    }
+  });
+}
 
-  }
-
-
-
-  function  onPlayerReady () {
-  const duraction = player.getDuraction();
+function onPlayerReady(event) {
+  const duration = player.getDuration();
   let interval;
-  $('.player').removeClass('hidden');
-  updateTimer();
+  updateTimerDisplay();
+
+  $(".player").removeClass("hidden");
 
   clearInterval(interval);
+
   interval = setInterval(() => {
-
     const completed = player.getCurrentTime();
-    const percent   = (completed / duraction) * 100;
+    const percents  = (completed / duration) * 100;
 
-    updateTimer();
+    changeButtonPosition(percents);
 
-    changeButtonPosition(percent);
-
+    updateTimerDisplay();
   }, 1000);
-   }
+}
+
+function onPlayerStateChange(event) {
+  const playerButton = $(".player__start");
+  switch (event.data) {
+    case 1: 
+      $(".player__wrapper").addClass("active");
+      playerButton.addClass("paused");
+      break;
+    case 2: 
+      playerButton.removeClass("paused");
+      break;
+  }
+}
+
+$(".player__start").on("click", e => {
+  const playerStatus = player.getPlayerState();  // 0 - ended, 1 - played, 2 - paused ...
+
+  if (playerStatus !== 1) {
+    player.playVideo();
+  } else {
+    player.pauseVideo();
+  }
+});
 
 
-   function updateTimer() {
-     $('.player__duration-completed').text(formatTime(player.getCurrentTime() ));
-     $('.player__duration-estimate').text(formatTime(player.getDuraction() ));
-   }
+$(".player__playback").on("click", e => {
+  e.preventDefault();
+  const bar               = $(e.currentTarget);
+  const newButtonPosition = e.pageX - bar.offset().left;
+  const clickedPercents   = (newButtonPosition / bar.width()) * 100;
+  const newPlayerTime     = (player.getDuration() / 100) * clickedPercents;
 
-   function formarTime(time) {
-     const roundTime = Math.round(time);
+  changeButtonPosition(clickedPercents);
+  player.seekTo(newPlayerTime);
+});
 
+$(".player__splash").on("click", e => {
+  player.playVideo();
+});
 
-     const minutes          = Math.floor(roundTime / 60);
-     const seconds          = roudTime - minutes * 60;
-     const formattedSeconds = seconds < 10 ? `0${second}` : seconds;
+function changeButtonPosition(percents) {
+  $(".player__playback-button").css({
+    left: `${percents}%`
+  });
+}
 
-     return minutes + ":" + formattedSeconds;
-   }
+function updateTimerDisplay() {
+  $(".player__duration-completed").text(formatTime(player.getCurrentTime()));
+  $(".player__duration-estimate").text(formatTime(player.getDuration()));
+}
+
+function formatTime(time) {
+  const roundTime = Math.round(time);
+
+  const minutes         = Math.floor(roundTime / 60);
+  const seconds         = roundTime - minutes * 60;
+  const formatedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+
+  return minutes + ":" + formatedSeconds;
+}
 
     $(".player__start").on('click', e => {
 //-1 (воспроизведение видео не начато)
@@ -449,6 +454,42 @@ function init() {
 
 
 
+// Слайдер 
+
+//вебианр 2 variant  - не обращаемся к DOM дереву
+
+const left  = document.querySelector("#left");
+const right = document.querySelector("#right");
+const items = document.querySelector("#items");
+
+const minRight     = 0;
+const maxRight     = 400;
+const step         = 100;
+let   currentRight = 0;    //слайде при загрузке стр всегда вначале
+
+items.style.right = currentRight;
+
+
+right.addEventListener("click", function() {
+  if (currentRight < maxRight) {
+    currentRight      += step;                //currentRight      +step
+    items.style.right  = currentRight + "%";
+  }else {
+    currentRight      = 0  // постоянная прокрутка
+    items.style.right = 0  //
+};
+});
+left.addEventListener("click", function() {
+  if (currentRight > minRight) {
+    currentRight      -= step;
+    items.style.right  = currentRight + "%";
+  } else {
+    currentRight      = maxRight;
+    items.style.right = currentRight + "%";
+  };
+});
+
+
 
 
 
@@ -458,56 +499,53 @@ function init() {
 
 
     
-// // Form 
-// const myForm = document.querySelector('#myForm');
-// const send   = document.querySelector('#send');
+// Form 
+const myForm = document.querySelector('#myForm');
+const send   = document.querySelector('#send');
 
-// send.addEventListener('click', event => {
-//   event.preventDefault();
+send.addEventListener('click', event => {
+  event.preventDefault();
 
-//   if (validateForm(myForm)) {
-//     const data = {
-//       name : myForm.elements.name.value,
-//       phone: myForm.elements.phone.value,
-//       email: myForm.elements.comment.value
-//     };
+  if (validateForm(myForm)) {
+    const data = {
+      name : myForm.elements.name.value,
+      phone: myForm.elements.phone.value,
+      email: myForm.elements.comment.value
+    };
 
-//    const xhr              = new XMLHttpRequest();
-//          xhr.responseType = 'json';
-//     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-//     xhr.send(JSON.stringify(data));
-//     xhr.addEventListener('load', () => {
-//        if (xhr.response.status) {
-//          console.log('Все ок!');
-//        }
-//     });
-//   }
-// });
+   const xhr              = new XMLHttpRequest();
+         xhr.responseType = 'json';
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.send(JSON.stringify(data));
+    xhr.addEventListener('load', () => {
+       if (xhr.response.status) {
+         console.log('Все ок!');
+       }
+    });
+  }
+});
 
-// function validateForm(form) {
-//   let valid = true;
-
-
-//   if (!validateField(form.elements.name)) {
-//     valid = false;
-//   }
-//   if (!validateField(form.elements.phone)) {
-//     valid = false;
-//   }
-//   if (!validateField(form.elements.comment)) {
-//     valid = false;
-//   }
-//   return valid;
-// }
-
-// function validateField(field) {
-//     field.nextElementSibling.textContent = field.validationMessage;
-//       return field.checkValidity();
-
-// }
+function validateForm(form) {
+  let valid = true;
 
 
+  if (!validateField(form.elements.name)) {
+    valid = false;
+  }
+  if (!validateField(form.elements.phone)) {
+    valid = false;
+  }
+  if (!validateField(form.elements.comment)) {
+    valid = false;
+  }
+  return valid;
+}
 
+function validateField(field) {
+    field.nextElementSibling.textContent = field.validationMessage;
+      return field.checkValidity();
+
+}
 
 
 
