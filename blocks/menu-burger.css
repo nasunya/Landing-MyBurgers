@@ -27,12 +27,13 @@
   font-style: normal;
   text-decoration: none;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 25px 0;
+  padding: 18px 0;
+  text-align: center;
 }
 
 .burger__item:after {

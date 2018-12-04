@@ -59,6 +59,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero__right,

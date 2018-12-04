@@ -223,6 +223,9 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero__right,
@@ -1184,16 +1187,16 @@ footer {
   line-height: 1.7;
 }
 
-#map {
-  height: 92%;
+.map {
+  height: 100%;
   width: 100%;
-  position: relative;
+  position: absolute;
 }
 
 .footer {
   width: 100%;
   background: #000;
-  bottom: 0;
+  top: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1202,6 +1205,12 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.625rem 0;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.25rem 0;
+  }
 }
 
 .footer__container {
@@ -2266,12 +2275,13 @@ footer {
   font-style: normal;
   text-decoration: none;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 25px 0;
+  padding: 18px 0;
+  text-align: center;
 }
 
 .burger__item:after {

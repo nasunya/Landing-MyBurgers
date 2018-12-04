@@ -1,13 +1,13 @@
-#map {
-  height: 92%;
+.map {
+  height: 100%;
   width: 100%;
-  position: relative;
+  position: absolute;
 }
 
 .footer {
   width: 100%;
   background: #000;
-  bottom: 0;
+  top: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,6 +16,12 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 0.625rem 0;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: rem(20px) 0;
+  }
 }
 
 .footer__container {
