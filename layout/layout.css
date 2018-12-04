@@ -36,6 +36,12 @@ body {
   min-height: 650px;
 }
 
+@media (max-width: 480px) {
+  .section {
+    min-height: 0;
+  }
+}
+
 .container {
   margin: 0 auto;
   position: relative;

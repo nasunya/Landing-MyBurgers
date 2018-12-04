@@ -1,4 +1,5 @@
 $tablets: 760px;
+$red   : #e35028;
 $phones: 480px;
 @mixin tablets {
   @media (max-width: $tablets) {
@@ -330,18 +331,144 @@ $phones: 480px;
   }
 }
 
+.burgers-pic {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  position       : relative;
 
+  @include tablets {
+    margin-bottom: rem(25px);
+    
+  }
+  @include phones {
+    padding-top: rem(55px);
+  }
+  
+}
+.burgers-pic__item {
+  display        : flex;
+  justify-content: center;
+}
+.burgers__item {
+  @include tablets {
+    width : 85%;
+    height: 100%;
+  }
+}
+.burgers-pic__consist {
+  position       : absolute;
+  top            : 0;
+  left           : 0;
+  background     : #f08c33;
+  height         : rem(90px);
+  width          : rem(90px);
+  border-radius  : rem(4px);
+  display        : flex;
+  align-items    : center;
+  flex-direction : column;
+  justify-content: space-evenly;
+  cursor         : pointer;
+
+  @include tablets{
+    top : rem(-70px);
+    left: rem(24px);
+  }
+  @include phones{
+    top : rem(-25px);
+    left: rem(20px);
+  }
+
+  &_active {
+    background: $red;
+    cursor    : pointer;
+    .burgers-pic__drop {
+      right  : rem(-256px);
+      z-index: 3;
+
+      @include tablets {
+        right: -303px;  //если вставить rem выпадашка сьезжает при сжимании
+      }
+      
+    }
+  }
+
+}
  .slider__item {
  min-width: 100%;
  display  : flex;
  }
 
-// .slider__list {
-//   white-space: nowrap;
-//   font-size  : 0;
-//   position   : absolute;
-//   top        : 0;
-//   left       : 0;
-//   overflow   : hidden;
-// }
+.burgers-pic__drop {
+  background-color: aliceblue;
+  border-radius   : rem(4px);
+  padding         : rem(20px);
+  position        : absolute;
+  top             : 0;
+  right           : -9999px;
+  display         : flex;
 
+}
+  .burgers__list {
+    display       : flex;
+    flex-direction: column;
+
+    
+  }
+  .burgers__item {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+    margin-bottom  : rem(10px);
+
+    @include tablets {
+      width: rem(235px);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .beef-icon {
+    width : rem(44px);
+    height: rem(39.212px);
+  }
+  
+  .buns-icon {
+    max-width : rem(48px);
+    max-height: rem(30.317px);
+  }
+  .salad-icon {
+    width : rem(38px);
+    height: rem(38.638px);
+  }
+  .sauce-icon {
+    width : rem(40.189px);
+    height: rem(43.416px);
+  }
+  .cucumber-icon {
+    width : rem(42px);
+    height: rem(37.754px);
+    
+  }
+  .cheese-icon {
+    width : rem(38.126px);
+    height: rem(34.138px);
+  }
+
+  .burgers__item-text {
+    display        : flex;
+    justify-content: space-between;
+    margin-left    : rem(10px);
+    width          : rem(160px);
+    font-family    : 'Ubuntu';
+    font-weight    : 300;
+    font-style     : normal;
+    font-size      : rem(14px);
+    
+  }
+  .burgers__item-name {
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    font-style : normal;
+  }
