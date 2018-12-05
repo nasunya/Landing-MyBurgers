@@ -1193,18 +1193,18 @@ footer {
   position: absolute;
 }
 
+section#contacts {
+  position: relative;
+}
+
 .footer {
-  width: 100%;
   background: #000;
-  top: 0;
+  position: absolute;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0.625rem 0;
+  top: inherit;
+  bottom: 0;
+  z-index: 2;
+  padding: 10px 0;
 }
 
 @media (max-width: 480px) {

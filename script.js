@@ -95,6 +95,7 @@ for (let i = 0; i < accoLinkLength; i++) {
  const reviewsList = document.querySelector('.reviews__list');
  const overlay     = document.querySelector('.overlay');
  const popupText   = document.querySelector('.popup__text');
+ const popup       = document.querySelector('.popup')
 
 
  reviewsList.addEventListener('click', e => {// event это событие, которое в данном случае произошло по клику
@@ -116,7 +117,8 @@ if (element.tagName === "BUTTON") {// при нажатии выводит им�
           closeElement.click();
         }
       });
-
+      
+  
       document.addEventListener('keyup', e => {
       let keyName = e.keyCode;
 
@@ -160,7 +162,7 @@ const performTransition = sectionEq => {
   setTimeout(() => {
     inScroll = false;
     setActiveMenuItem(sectionEq);
-  }, 1300); // продолжительность анимации + 300ms - потому что закончится инерция
+  }, 1300);
 };
 
 const scrollToSection = direction => {
@@ -197,7 +199,6 @@ $(document).on({
   },
   touchmove: e => e.preventDefault()
 
-  // touchstart touchend touchmove 
 });
 
 
@@ -215,8 +216,7 @@ if (isMobile) {
   $(document).swipe({
     swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
       /**
-       * плагин возвращает фактическое...
-       * ...
+       * плагин возвращает фактическо
        */
       const scrollDirection = direction === 'down' ? 'up' : 'down';
       
@@ -508,9 +508,9 @@ send.addEventListener('click', event => {
 
   if (validateForm(myForm)) {
     const data = {
-      name : myForm.elements.name.value,
-      phone: myForm.elements.phone.value,
-      email: myForm.elements.comment.value
+      name : myForm.name.value,
+      phone: myForm.phone.value,
+      email: myForm.comment.value
     };
 
    const xhr              = new XMLHttpRequest();
@@ -529,13 +529,13 @@ function validateForm(form) {
   let valid = true;
 
 
-  if (!validateField(form.elements.name)) {
+  if (!validateField(form.name)) {
     valid = false;
   }
-  if (!validateField(form.elements.phone)) {
+  if (!validateField(form.phone)) {
     valid = false;
   }
-  if (!validateField(form.elements.comment)) {
+  if (!validateField(form.comment)) {
     valid = false;
   }
   return valid;
