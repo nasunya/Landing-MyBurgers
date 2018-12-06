@@ -37,7 +37,9 @@ $phones: 480px;
     @include tablets{
       height: 100%;
       }
-    
+      @include phones {
+
+      }
   
   &__arrow {
     position  : absolute;
@@ -68,14 +70,21 @@ $phones: 480px;
       &:hover {
         transform: rotate(-90deg) scale(1.2);
       }
+
       @include tablets {
         right: rem(22px);
+        width: 100%;
       }
       @include phones {
-        right   : rem(0px);
-        position: absolute;
-      }
+        right          : rem(0px);
+        position       : absolute;
+        width          : 80%;
+        justify-content: flex-start;
+        text-align     : center;
+        align-items    : center;
     }
+      
+  }
   }
   
  
@@ -97,6 +106,13 @@ $phones: 480px;
   &__img {
     max-height: 100%;
     max-width : 100%;
+
+    @include tablets{
+      max-width: 80%;
+    }
+    @include phones{
+      max-width: 90%;
+    }
 }
   
   
@@ -107,12 +123,23 @@ $phones: 480px;
     font-style : normal;
     color      : white;
     line-height: 1.5rem;
+
+    @include phones{
+      font-size: 13px;
+    }
+
   }
   
   &__options {
     display        : flex;
     justify-content: flex-start;
     align-items    : flex-end;
+    @include tablets{
+      justify-content: center;
+    }
+    @include phones{
+      padding: 0;
+    }
   }
   
   &__prise-cost {
@@ -295,10 +322,12 @@ $phones: 480px;
         align-items    : center;
         height         : 100%;
         justify-content: center;
+        text-align     : center;
       }
       @include phones {
         padding    : 0;
         margin-left: 0;
+        text-align : center;
       }
     }
 
@@ -329,7 +358,11 @@ $phones: 480px;
   @include tablets{
     height: 100%;
   }
+  @include phones{
+    padding: 0;
+  }
 }
+
 
 .burgers-pic {
   display        : flex;

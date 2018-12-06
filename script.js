@@ -115,9 +115,11 @@ if (element.tagName === "BUTTON") {// при нажатии выводит им�
       overlay.addEventListener("click", e => { // чтобы при клике на любую часть экрана закрылось окно
         if (e.target === overlay) {// у каждого события есть свойство target , который указывает на какой элемент вообще происходил кликю. если кликнули на оверлей, то закоываем его
           closeElement.click();
-        }
-      });
-      
+         }
+  });
+
+
+
   
       document.addEventListener('keyup', e => {
       let keyName = e.keyCode;
@@ -528,7 +530,6 @@ send.addEventListener('click', event => {
 function validateForm(form) {
   let valid = true;
 
-
   if (!validateField(form.name)) {
     valid = false;
   }
@@ -537,17 +538,17 @@ function validateForm(form) {
   }
   if (!validateField(form.comment)) {
     valid = false;
-  }
+  } 
   return valid;
+  
 }
+
 
 function validateField(field) {
     field.nextElementSibling.textContent = field.validationMessage;
       return field.checkValidity();
 
 }
-
-
 
 
 

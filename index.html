@@ -811,17 +811,19 @@
              <section class="section order">
                             <div class="container">
                               <div class="title section__title">Закажите доставку</div>
-                              <form class="order__form-tag" id="myform">
+                              <form class="order__form-tag" id="myForm">
                                 <div class="order__form">
                                     <div class="order__form-col">
                                     <div class="order__form-row">
                                       <label class="order__form-block">
                                         <div class="order__form-label">Имя</div>
                                         <input class="order__form-input" name="name" type="text" placeholder="Имя">
+                                        <div class="error"></div>
                                       </label>
                                       <label class="order__form-block">
                                         <div class="order__form-label">Телефон</div>
                                         <input class="order__form-input phone-mask" name="phone" type="text" placeholder="Телефон">
+                                        <div class="error"></div>
                                       </label>
                                     </div>
                                     <div class="order__form-row">
@@ -854,6 +856,7 @@
                                       <label class="order__form-block">
                                         <div class="order__form-label">Комментарий</div>
                                         <textarea class="order__form-input order__form-input_textarea" placeholder="Укажите детали к заказу" name="comment"></textarea>
+                                        <div class="error"></div>
                                       </label>
                                     </div>
                                     <div class="order__form-buttons">

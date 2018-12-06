@@ -84,6 +84,7 @@
 @media (max-width: 760px) {
   .slider__arrow-right {
     right: rem(22px);
+    width: 100%;
   }
 }
 
@@ -91,6 +92,14 @@
   .slider__arrow-right {
     right: rem(0px);
     position: absolute;
+    width: 80%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -117,12 +126,30 @@
   max-width: 100%;
 }
 
+@media (max-width: 760px) {
+  .slider__img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider__img {
+    max-width: 90%;
+  }
+}
+
 .slider__text {
   font-family: 'Ubuntu';
   font-weight: 300;
   font-style: normal;
   color: white;
   line-height: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .slider__text {
+    font-size: 13px;
+  }
 }
 
 .slider__options {
@@ -135,6 +162,20 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+@media (max-width: 760px) {
+  .slider__options {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider__options {
+    padding: 0;
+  }
 }
 
 .slider__prise-cost {
@@ -332,6 +373,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    text-align: center;
   }
 }
 
@@ -339,6 +381,7 @@
   .burgers__container .slider__item {
     padding: 0;
     margin-left: 0;
+    text-align: center;
   }
 }
 
@@ -372,6 +415,12 @@
 @media (max-width: 760px) {
   .slider__list {
     height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider__list {
+    padding: 0;
   }
 }
 
